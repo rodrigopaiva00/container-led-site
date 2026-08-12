@@ -6,7 +6,7 @@
 
 /* Identidade e imagens oficiais */
 .brand-image{width:190px;height:55px;overflow:hidden;position:relative;flex:0 0 auto}
-.brand-image img{position:absolute;width:190px;height:auto;left:0;top:-36px}
+.brand-image img{position:absolute;width:190px;height:auto;left:0;top:-3px}
 .hero-photo{height:82vh;max-width:430px;overflow:hidden;border-radius:10px 10px 0 0;transform:perspective(900px) rotateY(-5deg);box-shadow:0 28px 80px #000c,0 0 45px #ff5a1422}
 .hero-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 45%;filter:saturate(1.05) contrast(1.04)}
 .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#08080866 0%,transparent 45%),linear-gradient(0deg,#080808cc 0%,transparent 34%)}
@@ -58,5 +58,5 @@
 .sales-banner-copy p{color:var(--muted);max-width:630px;margin:18px 0 25px}
 .sales-banner img{width:100%;height:540px;object-fit:cover;display:block}
 
-@media(max-width:960px){.hero-photo{width:44vw;right:-5%;opacity:.48}.brand-image{width:165px}.brand-image img{width:165px;top:-31px}.sales-hero-grid,.sales-banner{grid-template-columns:1fr}.sales-hero-media{height:500px}.sales-proof{margin-top:24px}.benefit-grid{grid-template-columns:repeat(2,1fr)}.sales-banner img{height:430px}}
-@media(max-width:640px){.hero-panel.hero-photo{width:68vw;right:-24%;height:58vh;bottom:0}.connect-visual.connect-photo{height:440px;transform:none;margin:0}.pdf-showcase{border-radius:12px}.brand-image{width:155px;height:48px}.brand-image img{width:155px;top:-29px}.sales-hero{padding-top:92px}.sales-hero-grid{gap:28px}.sales-hero h1{font-size:clamp(3.2rem,18vw,5.5rem)}.sales-hero-media{height:420px}.proof-grid{grid-template-columns:1fr}.proof-item{border-right:0;border-bottom:1px solid #ffffff12}.proof-item:last-child{border-bottom:0}.benefit-grid{grid-template-columns:1fr}.sales-banner-copy{padding:34px 24px}.sales-banner img{height:360px}.media-card-image{height:340px}}
+@media(max-width:960px){.hero-photo{width:44vw;right:-5%;opacity:.48}.brand-image{width:165px}.brand-image img{width:165px;top:-2px}.sales-hero-grid,.sales-banner{grid-template-columns:1fr}.sales-hero-media{height:500px}.sales-proof{margin-top:24px}.benefit-grid{grid-template-columns:repeat(2,1fr)}.sales-banner img{height:430px}}
+@media(max-width:640px){.hero-panel.hero-photo{width:68vw;right:-24%;height:58vh;bottom:0}.connect-visual.connect-photo{height:440px;transform:none;margin:0}.pdf-showcase{border-radius:12px}.brand-image{width:155px;height:48px}.brand-image img{width:155px;top:-1px}.sales-hero{padding-top:92px}.sales-hero-grid{gap:28px}.sales-hero h1{font-size:clamp(3.2rem,18vw,5.5rem)}.sales-hero-media{height:420px}.proof-grid{grid-template-columns:1fr}.proof-item{border-right:0;border-bottom:1px solid #ffffff12}.proof-item:last-child{border-bottom:0}.benefit-grid{grid-template-columns:1fr}.sales-banner-copy{padding:34px 24px}.sales-banner img{height:360px}.media-card-image{height:340px}}
