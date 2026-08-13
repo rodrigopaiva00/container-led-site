@@ -60,3 +60,41 @@
 
 @media(max-width:960px){.hero-photo{width:44vw;right:-5%;opacity:.48}.brand-image{width:165px}.brand-image img{width:165px;top:-2px}.sales-hero-grid,.sales-banner{grid-template-columns:1fr}.sales-hero-media{height:500px}.sales-proof{margin-top:24px}.benefit-grid{grid-template-columns:repeat(2,1fr)}.sales-banner img{height:430px}}
 @media(max-width:640px){.hero-panel.hero-photo{width:68vw;right:-24%;height:58vh;bottom:0}.connect-visual.connect-photo{height:440px;transform:none;margin:0}.pdf-showcase{border-radius:12px}.brand-image{width:155px;height:48px}.brand-image img{width:155px;top:-1px}.sales-hero{padding-top:92px}.sales-hero-grid{gap:28px}.sales-hero h1{font-size:clamp(3.2rem,18vw,5.5rem)}.sales-hero-media{height:420px}.proof-grid{grid-template-columns:1fr}.proof-item{border-right:0;border-bottom:1px solid #ffffff12}.proof-item:last-child{border-bottom:0}.benefit-grid{grid-template-columns:1fr}.sales-banner-copy{padding:34px 24px}.sales-banner img{height:360px}.media-card-image{height:340px}}
+
+
+/* Ajustes incrementais: mapas, simulador e Instagram */
+.hero-photo{border:3px solid var(--orange);box-shadow:0 28px 80px #000c,0 0 0 4px #ff5a0030,0 0 52px #ff5a0060}
+.map-toggle{margin-top:14px;padding:0;background:none;border:0;color:var(--orange);font-size:11px;font-weight:800;cursor:pointer;text-align:left}
+.map-toggle span{display:inline-block;margin-left:6px;font-size:16px;transition:transform .2s}
+.map-toggle[aria-expanded="true"] span{transform:rotate(45deg)}
+.map-drawer{margin:0 22px 22px;padding:16px;border:1px solid #ff5a0045;border-radius:12px;background:#f7f3ed;display:grid;gap:3px}
+.map-drawer[hidden]{display:none}
+.map-drawer strong{font:700 12px "Space Grotesk",sans-serif}.map-drawer span{font-size:11px;color:var(--muted)}.map-drawer a{margin-top:8px;color:var(--orange);font-size:11px;font-weight:800}
+.countdown-visual{display:grid;place-items:center;align-content:center;gap:18px;background:radial-gradient(circle at 50% 44%,#ff6a201f,transparent 34%),linear-gradient(145deg,#191919,#080808);color:#fff}
+.countdown-visual>strong{font:700 12px "Space Grotesk",sans-serif;letter-spacing:.22em;color:#ffb285}
+.hourglass{width:68px;height:88px;position:relative;border-top:7px solid var(--orange);border-bottom:7px solid var(--orange)}
+.hourglass:before,.hourglass:after{content:"";position:absolute;left:8px;right:8px;height:35px;background:linear-gradient(135deg,transparent 48%,#ff6a20 49% 51%,transparent 52%),linear-gradient(45deg,transparent 48%,#ff6a20 49% 51%,transparent 52%)}
+.hourglass:before{top:3px}.hourglass:after{bottom:3px;transform:rotate(180deg)}
+.hourglass i{position:absolute;width:8px;height:8px;border-radius:50%;background:#fff;left:30px;top:34px;box-shadow:0 0 18px #ff5a00;animation:hourglassDrop 1.5s ease-in infinite}
+@keyframes hourglassDrop{0%{transform:translateY(-10px);opacity:0}30%,70%{opacity:1}100%{transform:translateY(18px);opacity:0}}
+.simulator-section{background:#0b0b0c;color:#fff}
+.simulator-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.simulator-copy h2,.instagram-copy h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(42px,5.2vw,76px);line-height:.96;letter-spacing:-.055em;margin:0}
+.simulator-copy h2 em,.instagram-copy h2 em{font-style:normal;color:var(--orange)}
+.simulator-copy>p,.instagram-copy>p{color:#999;max-width:560px;margin:25px 0}
+.simulator-copy ul{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:10px;color:#ddd;font-size:13px}.simulator-copy li:before{content:"✓";color:var(--orange);margin-right:10px;font-weight:900}
+.simulator-card{background:#151515;border:1px solid #ffffff18;border-radius:var(--radius);padding:28px;display:grid;gap:18px}
+.simulator-card label{display:grid;gap:8px;color:#bbb;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.simulator-card input,.simulator-card select{width:100%;border:1px solid #ffffff1d;background:#0b0b0b;color:#fff;border-radius:10px;padding:13px}
+.simulator-result{padding:22px;border-radius:14px;background:#0b0b0b;border:1px solid #ff5a0042}
+.simulator-result>small{color:var(--orange);font-weight:800;letter-spacing:.15em}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0}.result-grid div{padding:14px;background:#151515;border-radius:10px}.result-grid strong,.result-grid span{display:block}.result-grid strong{font:700 18px "Space Grotesk",sans-serif}.result-grid span{font-size:10px;color:#888}
+.simulator-result>p{font-size:10px;color:#777;margin:14px 0 0}
+.instagram-section{background:#111;color:#fff}
+.instagram-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
+.instagram-collage{min-height:480px;display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:1fr 1fr;gap:8px;position:relative}
+.instagram-collage img{width:100%;height:100%;object-fit:cover;border-radius:12px;min-height:0}
+.instagram-collage img:first-child{grid-row:1/3}
+.instagram-collage span{position:absolute;right:15px;bottom:15px;background:#090909dd;border:1px solid #ffffff22;border-radius:999px;padding:9px 13px;color:#fff;font-size:11px;font-weight:800}
+@media(max-width:960px){.simulator-grid,.instagram-shell{grid-template-columns:1fr}.instagram-collage{min-height:420px}}
+@media(max-width:640px){.simulator-card{padding:20px}.result-grid{grid-template-columns:1fr}.instagram-collage{min-height:360px}.panel-cards{grid-template-columns:1fr}.location-featured .card-visual,.card-visual{height:390px}}

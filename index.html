@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
-  <script src="script.js?v=3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="script.js?v=4" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -19,10 +19,10 @@
       <a class="brand brand-image" href="#inicio" aria-label="Container LED - início"><img src="assets/container-led-logo.webp" alt="Container LED"></a>
       <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
       <nav id="menu" class="main-nav" aria-label="Navegação principal">
-        <a href="paineis.html">Anuncie nos painéis</a>
+        <a href="#paineis">Nossos painéis</a>
         <a href="#connect">Container Connect</a>
         <a href="#solucoes">Soluções</a>
-        <a href="#projetos">Projetos</a>
+        <a href="#simulador">Simulador grátis</a>
         <a href="#empresa">A empresa</a>
         <a class="nav-cta" href="#orcamento">Solicitar orçamento</a>
       </nav>
@@ -47,7 +47,7 @@
           <div><strong>360º</strong><span>projetos sob medida</span></div>
         </div>
       </div>
-      <div class="hero-panel hero-photo" aria-label="Painel de LED da Avenida Anselmo Alves"><img src="assets/painel-anselmo-alves.webp" alt="Painel Container LED na Avenida Anselmo Alves"><span>AV. ANSELMO ALVES • PÁTIO SABIÁ</span></div>
+      <div class="hero-panel hero-photo" aria-label="Painel publicitário da Container LED"><img src="assets/painel-anselmo-alves.webp" alt="Painel publicitário da Container LED"></div>
     </section>
 
     <section class="marquee" aria-label="Soluções oferecidas"><div>PAINÉIS DE LED <span>✦</span> MÍDIA DIGITAL <span>✦</span> CONTAINER CONNECT <span>✦</span> PROJETOS ESPECIAIS <span>✦</span> PAINÉIS DE LED <span>✦</span> MÍDIA DIGITAL</div></section>
@@ -60,19 +60,22 @@
         </div>
         <div class="panel-cards">
           <article class="location-card location-featured reveal">
-            <div class="card-visual panel-photo"><img src="assets/painel-anselmo-patio-sabia.webp" alt="Painel da Avenida Anselmo Alves"><span class="status status-live">Em operação</span><div class="dimension">4m × 2m</div></div>
-            <div class="card-body"><span class="card-index">01</span><div><h3>Av. Anselmo Alves</h3><p><strong>Em frente ao Pátio Sabiá.</strong> Ponto estratégico de alto fluxo, conectando importantes setores da cidade.</p></div></div>
+            <div class="card-visual panel-photo"><img src="assets/painel-anselmo-patio-sabia.webp" alt="Painel da Avenida Anselmo Alves em frente ao Pátio Sabiá"><span class="status status-live">Em operação</span><div class="dimension">4m × 2m</div></div>
+            <div class="card-body"><span class="card-index">01</span><div><h3>Av. Anselmo Alves - PÁTIO SABIÁ</h3><p>Ponto estratégico em frente ao Pátio Sabiá, local de alto fluxo, conectando importantes setores da cidade.</p><button class="map-toggle" type="button" aria-expanded="false">Ver endereço e localização <span>+</span></button></div></div>
+            <div class="map-drawer" hidden><strong>Av. Anselmo Alves dos Santos, 1056</strong><span>Uberlândia - MG</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Anselmo+Alves+dos+Santos,+1056,+Uberlandia,+MG" target="_blank" rel="noopener">Abrir no Google Maps ↗</a></div>
           </article>
           <article class="location-card reveal">
             <div class="card-visual panel-photo"><img src="assets/painel-rondon.webp" alt="Painel da Avenida Rondon Pacheco"><span class="status status-live">Em operação</span><div class="dimension">6m × 3m</div></div>
-            <div class="card-body"><span class="card-index">02</span><div><h3>Av. Rondon Pacheco</h3><p>Na principal avenida comercial de Uberlândia, <strong>a 200 metros do Colégio Gabarito</strong>, garantindo máxima exposição.</p></div></div>
+            <div class="card-body"><span class="card-index">02</span><div><h3>Av. Rondon Pacheco</h3><p>Na principal avenida comercial de Uberlândia, <strong>a 200 metros do Colégio Gabarito</strong>, garantindo máxima exposição.</p><button class="map-toggle" type="button" aria-expanded="false">Ver endereço e localização <span>+</span></button></div></div>
+            <div class="map-drawer" hidden><strong>Av. Rondon Pacheco, 2064</strong><span>Vigilato Pereira, Uberlândia - MG</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Rondon+Pacheco,+2064,+Uberlandia,+MG" target="_blank" rel="noopener">Abrir no Google Maps ↗</a></div>
           </article>
           <article class="location-card reveal">
-            <div class="card-visual panel-photo"><img src="assets/painel-getulio-vargas.webp" alt="Local do futuro painel da Avenida Getúlio Vargas"><span class="status status-building">Em construção</span></div>
-            <div class="card-body"><span class="card-index">03</span><div><h3>Av. Getúlio Vargas</h3><p>Em expansão, com previsão de inauguração em 06/2026, reforçando nossa presença regional.</p></div></div>
+            <div class="card-visual countdown-visual"><span class="status status-building">Em construção</span><div class="hourglass" aria-hidden="true"><i></i></div><strong>EM BREVE</strong></div>
+            <div class="card-body"><span class="card-index">03</span><div><h3>Av. Getúlio Vargas - D'ville Supermercados</h3><p>Em construção, localizado no coração da cidade em frente ao D'ville Supermercados.</p><button class="map-toggle" type="button" aria-expanded="false">Ver localização <span>+</span></button></div></div>
+            <div class="map-drawer" hidden><strong>Av. Getúlio Vargas - D'ville Supermercados</strong><span>Uberlândia - MG</span><a href="https://www.google.com/maps/search/?api=1&amp;query=D%27ville+Supermercados+Avenida+Getulio+Vargas+Uberlandia+MG" target="_blank" rel="noopener">Pesquisar no Google Maps ↗</a></div>
           </article>
         </div>
-        <div class="section-cta reveal"><p>Quer colocar sua marca em movimento?</p><a class="text-link" href="paineis.html">Conheça a página de mídia <span>→</span></a></div>
+        <div class="section-cta reveal"><p>Quer colocar sua marca em movimento?</p><a class="text-link" href="#orcamento" data-interest="Publicidade em painel de LED">Consultar disponibilidade <span>→</span></a></div>
       </div>
     </section>
 
@@ -102,6 +105,18 @@
       </div>
     </section>
 
+    <section class="section simulator-section" id="simulador">
+      <div class="container simulator-grid">
+        <div class="simulator-copy reveal"><div class="eyebrow light"><span></span> SIMULADOR GRATUITO</div><h2>Visualize seu projeto<br><em>antes de instalar.</em></h2><p>Informe o ambiente e as dimensões desejadas. O simulador cria uma estimativa inicial para começar a conversa com nossa equipe.</p><ul><li>Resultado instantâneo</li><li>Sem compromisso</li><li>Atendimento pelo WhatsApp</li></ul></div>
+        <form class="simulator-card reveal" id="led-simulator">
+          <div class="form-row"><label>Ambiente<select name="ambiente"><option value="outdoor">Outdoor</option><option value="indoor">Indoor</option></select></label><label>Aplicação<select name="aplicacao"><option>Fachada</option><option>Loja ou recepção</option><option>Evento</option><option>Posto de combustível</option><option>Empreendimento ou terreno</option></select></label></div>
+          <div class="form-row"><label>Largura (m)<input type="number" name="largura" min="0.5" max="30" step="0.1" value="4" required></label><label>Altura (m)<input type="number" name="altura" min="0.5" max="20" step="0.1" value="2" required></label></div>
+          <button class="button button-primary submit-button" type="submit">Gerar simulação grátis <span>→</span></button>
+          <div class="simulator-result" id="simulator-result" aria-live="polite" hidden><small>ESTIMATIVA INICIAL</small><div class="result-grid"><div><strong id="result-area">8 m²</strong><span>área total</span></div><div><strong id="result-format">2:1</strong><span>proporção</span></div><div><strong id="result-resolution">1333 × 667 px</strong><span>resolução estimada</span></div><div><strong id="result-power">5,6 kW</strong><span>potência máxima</span></div></div><a class="button button-outline" id="simulator-whatsapp" href="#" target="_blank" rel="noopener">Falar com um consultor ↗</a><p>Estimativa orientativa. A especificação final depende de visita técnica, distância de visualização e condições do local.</p></div>
+        </form>
+      </div>
+    </section>
+
     <section class="section dark-section" id="segmentos">
       <div class="container">
         <div class="section-heading split-heading reveal"><div><div class="eyebrow light"><span></span> SEGMENTOS</div><h2>Onde existe público,<br><em>existe oportunidade.</em></h2></div><p>Atendemos empresas, agências e organizações que buscam comunicação visual com tecnologia, presença e resultado.</p></div>
@@ -117,6 +132,13 @@
           <div class="project project-two"><span>AMBIENTES</span><strong>Tecnologia integrada<br>à arquitetura</strong></div>
           <div class="project project-three"><span>MÍDIA</span><strong>Conteúdo que<br>prende o olhar</strong></div>
         </div>
+      </div>
+    </section>
+
+    <section class="section instagram-section" id="instagram">
+      <div class="container instagram-shell reveal">
+        <div class="instagram-copy"><div class="eyebrow light"><span></span> @CONTAINERLED</div><h2>Acompanhe a<br><em>Container LED.</em></h2><p>Veja campanhas, instalações, bastidores e novidades dos nossos painéis, totens e projetos de mídia digital.</p><a class="button button-primary" href="https://www.instagram.com/containerled/" target="_blank" rel="noopener">Conhecer nosso Instagram ↗</a></div>
+        <a class="instagram-collage" href="https://www.instagram.com/containerled/" target="_blank" rel="noopener" aria-label="Abrir Instagram da Container LED"><img src="assets/painel-anselmo-alves.webp" alt="Painel Container LED"><img src="assets/container-connect-totem.webp" alt="Totem Container Connect"><img src="assets/painel-rondon.webp" alt="Painel da Rondon Pacheco"><span>Ver @containerled ↗</span></a>
       </div>
     </section>
 

@@ -54,4 +54,36 @@ document.getElementById('quote-form').addEventListener('submit', (event) => {
   window.open(`https://wa.me/5534999259499?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
 });
 
+document.querySelectorAll('.map-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const drawer = button.closest('.location-card').querySelector('.map-drawer');
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    drawer.hidden = open;
+  });
+});
+
+const simulator = document.getElementById('led-simulator');
+if (simulator) {
+  simulator.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(simulator);
+    const width = Number(data.get('largura'));
+    const height = Number(data.get('altura'));
+    const area = width * height;
+    const outdoor = data.get('ambiente') === 'outdoor';
+    const pitch = outdoor ? 6 : 3;
+    const pixelsWide = Math.round(width * 1000 / pitch);
+    const pixelsHigh = Math.round(height * 1000 / pitch);
+    const power = area * (outdoor ? 0.7 : 0.45);
+    document.getElementById('result-area').textContent = area.toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' m²';
+    document.getElementById('result-format').textContent = (width / height).toLocaleString('pt-BR', { maximumFractionDigits: 2 }) + ':1';
+    document.getElementById('result-resolution').textContent = pixelsWide + ' × ' + pixelsHigh + ' px';
+    document.getElementById('result-power').textContent = power.toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' kW';
+    const message = ['Olá! Fiz uma simulação grátis no site da Container LED.','','Ambiente: ' + data.get('ambiente'),'Aplicação: ' + data.get('aplicacao'),'Dimensões: ' + width + ' m × ' + height + ' m','Área estimada: ' + area.toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' m²','Gostaria de receber uma avaliação do projeto.'].join('\n');
+    document.getElementById('simulator-whatsapp').href = 'https://wa.me/5534999259499?text=' + encodeURIComponent(message);
+    document.getElementById('simulator-result').hidden = false;
+  });
+}
+
 document.getElementById('year').textContent = new Date().getFullYear();
