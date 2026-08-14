@@ -165,3 +165,16 @@
 .panel-switch-card h3{margin:0;font:700 20px "Space Grotesk",sans-serif}.panel-switch-card p{margin:10px 0;color:var(--muted);font-size:12px}.panel-switch-card b{display:block;margin-top:20px;color:var(--orange);font-size:11px}
 @media(max-width:1100px){.panel-facts-grid{grid-template-columns:repeat(3,1fr)}.panel-fact:nth-child(3){border-right:0}.panel-fact:nth-child(-n+3){border-bottom:1px solid #ffffff12}}
 @media(max-width:760px){.panel-switcher-shell{padding:25px}.panel-switcher-head{align-items:flex-start;flex-direction:column}.panel-switch-grid{grid-template-columns:1fr}.panel-facts-grid{grid-template-columns:1fr}.panel-fact{border-right:0;border-bottom:1px solid #ffffff12}.panel-fact-resolution strong{white-space:normal}}
+
+
+/* Grade de seis soluções baseada na página 11 do portfólio */
+.solutions-grid-section{background:#050505;color:#fff}
+.solutions-grid-heading{text-align:center;margin-bottom:48px}
+.solutions-grid-heading h2{margin:0;color:var(--orange);font:800 clamp(42px,5.4vw,68px)/1 "Space Grotesk",sans-serif;letter-spacing:-.045em;text-transform:uppercase}
+.solutions-six-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px}
+.solution-six-card{border-top:3px solid var(--orange);padding-top:16px}
+.solution-six-card img{display:block;width:100%;aspect-ratio:1.88/1;object-fit:cover;border:1px solid #ffffff24}
+.solution-six-card h3{margin:13px 0 5px;color:#fff;font:800 clamp(17px,1.6vw,22px)/1.15 "Space Grotesk",sans-serif;letter-spacing:-.02em}
+.solution-six-card p{margin:0;color:#d1d1d1;font-size:13px;line-height:1.45}
+@media(max-width:900px){.solutions-six-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.solutions-grid-heading{margin-bottom:34px}.solutions-six-grid{grid-template-columns:1fr;gap:30px}.solution-six-card h3{font-size:20px}}
