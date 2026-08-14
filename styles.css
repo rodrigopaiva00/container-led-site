@@ -147,7 +147,7 @@
 
 
 /* Navegação entre os painéis e ficha técnica ampliada */
-.panel-facts-grid{grid-template-columns:repeat(5,1fr)}
+.panel-facts-grid{grid-template-columns:repeat(4,1fr)}
 .panel-fact-resolution strong{font-size:clamp(15px,1.65vw,22px);white-space:nowrap}
 .panel-fact-resolution span{display:block;margin-top:5px;color:var(--orange);font-size:11px;font-weight:800}
 .panel-detail-copy strong,.panel-location-copy strong{color:inherit}
