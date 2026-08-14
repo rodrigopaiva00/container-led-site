@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7">
-  <script src="script.js?v=6" defer></script>
+  <link rel="stylesheet" href="styles.css?v=8">
+  <script src="script.js?v=8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -131,15 +131,65 @@
       </div>
     </section>
 
-    <section class="section simulator-section" id="simulador">
-      <div class="container simulator-grid">
-        <div class="simulator-copy reveal"><div class="eyebrow light"><span></span> SIMULADOR GRATUITO</div><h2>Visualize seu projeto<br><em>antes de instalar.</em></h2><p>Informe o ambiente e as dimensões desejadas. O simulador cria uma estimativa inicial para começar a conversa com nossa equipe.</p><ul><li>Resultado instantâneo</li><li>Sem compromisso</li><li>Atendimento pelo WhatsApp</li></ul></div>
-        <form class="simulator-card reveal" id="led-simulator">
-          <div class="form-row"><label>Ambiente<select name="ambiente"><option value="outdoor">Outdoor</option><option value="indoor">Indoor</option></select></label><label>Aplicação<select name="aplicacao"><option>Fachada</option><option>Loja ou recepção</option><option>Evento</option><option>Posto de combustível</option><option>Empreendimento ou terreno</option></select></label></div>
-          <div class="form-row"><label>Largura (m)<input type="number" name="largura" min="0.5" max="30" step="0.1" value="4" required></label><label>Altura (m)<input type="number" name="altura" min="0.5" max="20" step="0.1" value="2" required></label></div>
-          <button class="button button-primary submit-button" type="submit">Gerar simulação grátis <span>→</span></button>
-          <div class="simulator-result" id="simulator-result" aria-live="polite" hidden><small>ESTIMATIVA INICIAL</small><div class="result-grid"><div><strong id="result-area">8 m²</strong><span>área total</span></div><div><strong id="result-format">2:1</strong><span>proporção</span></div><div><strong id="result-resolution">1333 × 667 px</strong><span>resolução estimada</span></div><div><strong id="result-power">5,6 kW</strong><span>potência máxima</span></div></div><a class="button button-outline" id="simulator-whatsapp" href="#" target="_blank" rel="noopener">Falar com um consultor ↗</a><p>Estimativa orientativa. A especificação final depende de visita técnica, distância de visualização e condições do local.</p></div>
-        </form>
+    <section class="section simulator-section simulator-v2-section" id="simulador">
+      <div class="container">
+        <div class="simulator-access" id="simulator-access">
+          <div class="simulator-access-copy reveal">
+            <div class="simulator-badge"><span></span> SIMULADOR GRATUITO</div>
+            <h2>Veja seu painel LED<br><em>antes de comprar.</em></h2>
+            <p>Configure dimensões, resolução, peso e consumo de energia em segundos. Um estudo preliminar profissional, sem compromisso.</p>
+            <ul>
+              <li>Simulação em tempo real</li>
+              <li>Especificações técnicas instantâneas</li>
+              <li>Resultado pronto para WhatsApp</li>
+              <li>Atendimento consultivo da Container LED</li>
+            </ul>
+          </div>
+          <form class="simulator-lead-form reveal" id="simulator-lead-form">
+            <div class="simulator-form-intro"><strong>Preencha para acessar</strong><span>Acesso gratuito e imediato após o cadastro</span></div>
+            <label>Nome da empresa<input name="empresa" required placeholder="Ex.: Restaurante do João" autocomplete="organization"></label>
+            <label>Seu nome<input name="nome" required placeholder="Nome completo" autocomplete="name"></label>
+            <div class="form-row"><label>CNPJ ou CPF<input name="documento" placeholder="00.000.000/0001-00" inputmode="numeric"></label><label>WhatsApp<input name="whatsapp" required placeholder="(34) 99999-9999" inputmode="tel" autocomplete="tel"></label></div>
+            <label>E-mail<input name="email" type="email" required placeholder="seuemail@empresa.com" autocomplete="email"></label>
+            <label class="simulator-consent"><input type="checkbox" required> <span>Autorizo o uso destes dados somente para receber o resultado e atendimento sobre este projeto.</span></label>
+            <button class="button button-primary submit-button" type="submit">ACESSAR O SIMULADOR GRÁTIS <span>→</span></button>
+            <div class="simulator-security"><span>🔒 Dados não armazenados</span><span>⚡ Acesso imediato</span><span>⊘ Sem spam</span></div>
+          </form>
+        </div>
+
+        <div class="simulator-workspace" id="simulator-workspace" hidden>
+          <div class="simulator-workspace-heading">
+            <div><div class="simulator-badge"><span></span> SIMULAÇÃO EM TEMPO REAL</div><h2>Configure seu <em>projeto LED.</em></h2></div>
+            <button class="simulator-reset" id="simulator-reset" type="button">Alterar cadastro</button>
+          </div>
+          <div class="simulator-builder">
+            <form class="simulator-controls" id="led-simulator">
+              <div class="form-row"><label>Tipo de solução<select name="ambiente"><option value="outdoor">Painel outdoor</option><option value="indoor">Painel indoor</option><option value="totem">Totem digital</option><option value="testeira">Testeira para posto</option></select></label><label>Aplicação<select name="aplicacao"><option>Fachada comercial</option><option>Loja ou recepção</option><option>Shopping center</option><option>Restaurante</option><option>Posto de combustível</option><option>Empreendimento ou terreno</option></select></label></div>
+              <div class="form-row"><label>Largura (m)<input type="number" name="largura" min="0.5" max="30" step="0.1" value="4" required></label><label>Altura (m)<input type="number" name="altura" min="0.5" max="20" step="0.1" value="2" required></label></div>
+              <div class="form-row"><label>Pixel pitch<select name="pitch"><option value="2.5">P2.5 — curta distância</option><option value="3">P3 — alta definição</option><option value="4">P4 — uso versátil</option><option value="6" selected>P6 — outdoor</option><option value="8">P8 — longa distância</option><option value="10">P10 — grandes formatos</option></select></label><label>Uso diário (horas)<input type="number" name="horas" min="1" max="24" step="1" value="12" required></label></div>
+              <label>Tarifa de energia (R$/kWh)<input type="number" name="tarifa" min="0.1" max="5" step="0.01" value="0.95" required></label>
+              <button class="button button-primary submit-button" type="submit">CALCULAR MEU PAINEL <span>→</span></button>
+            </form>
+            <div class="simulator-preview-result">
+              <div class="led-preview-wrap"><div class="led-preview" id="led-preview"><span>CONTAINER</span><strong>LED</strong><small id="preview-size">4,0 × 2,0 m</small></div></div>
+              <div class="simulator-result" id="simulator-result" aria-live="polite">
+                <small>RESULTADO DO PROJETO</small>
+                <div class="result-grid result-grid-v2">
+                  <div><strong id="result-area">8,0 m²</strong><span>área total</span></div>
+                  <div><strong id="result-resolution">667 × 333 px</strong><span>resolução estimada</span></div>
+                  <div><strong id="result-weight">336 kg</strong><span>peso estimado</span></div>
+                  <div><strong id="result-power">6,0 kW</strong><span>potência máxima</span></div>
+                  <div><strong id="result-consumption">907 kWh/mês</strong><span>consumo estimado</span></div>
+                  <div><strong id="result-cost">R$ 862/mês</strong><span>custo de energia</span></div>
+                </div>
+                <p class="simulator-disclaimer">Estimativa preliminar. Estrutura, instalação elétrica, ventilação e condições do local dependem de avaliação técnica.</p>
+                <a class="button button-primary" id="simulator-whatsapp" href="#" target="_blank" rel="noopener">ENVIAR RESULTADO PELO WHATSAPP <span>↗</span></a>
+                <a class="simulator-email-link" id="simulator-email" href="#">Enviar cópia por e-mail de teste</a>
+                <small class="simulator-test-note">Modo de teste: resultado direcionado apenas aos contatos informados para validação.</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
