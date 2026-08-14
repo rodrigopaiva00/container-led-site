@@ -154,7 +154,7 @@
 .panel-switcher{padding:0 0 100px;background:var(--paper);color:var(--ink)}
 .panel-switcher-shell{padding:42px;background:#0b0b0c;border-radius:20px;box-shadow:0 25px 65px #1e0d001c}
 .panel-switcher-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:25px}
-.panel-switcher-head .eyebrow{margin-bottom:14px}.panel-switcher-head h2{margin:0;max-width:700px;color:#fff;font:700 clamp(32px,4vw,52px)/1 "Space Grotesk",sans-serif;letter-spacing:-.045em}
+.panel-switcher-head .eyebrow{margin-bottom:14px}.panel-switcher-head h2{margin:0;max-width:700px;color:#fff;font:700 11px/1.4 "Space Grotesk",sans-serif;letter-spacing:.08em}
 .panel-switcher-head>a{color:var(--orange);font-size:12px;font-weight:800;white-space:nowrap}
 .panel-switch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 .panel-switch-card{min-height:185px;padding:26px;display:flex;gap:20px;background:#fff;border:3px solid transparent;border-radius:14px;color:var(--ink);transition:.2s}
