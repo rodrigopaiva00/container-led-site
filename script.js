@@ -38,21 +38,24 @@ document.querySelectorAll('[data-interest]').forEach(link => {
   });
 });
 
-document.getElementById('quote-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const lines = [
-    'Olá! Vim pelo site da Container LED e gostaria de solicitar informações.',
-    '',
-    `Nome: ${data.get('nome')}`,
-    `Empresa: ${data.get('empresa') || 'Não informada'}`,
-    `WhatsApp: ${data.get('telefone')}`,
-    `Cidade/UF: ${data.get('cidade')}`,
-    `Interesse: ${data.get('interesse')}`,
-    `Mensagem: ${data.get('mensagem') || 'Sem detalhes adicionais'}`
-  ];
-  window.open(`https://wa.me/5534999259499?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
-});
+const quoteForm = document.getElementById('quote-form');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const lines = [
+      'Olá! Vim pelo site da Container LED e gostaria de solicitar informações.',
+      '',
+      `Nome: ${data.get('nome')}`,
+      `Empresa: ${data.get('empresa') || 'Não informada'}`,
+      `WhatsApp: ${data.get('telefone')}`,
+      `Cidade/UF: ${data.get('cidade')}`,
+      `Interesse: ${data.get('interesse')}`,
+      `Mensagem: ${data.get('mensagem') || 'Sem detalhes adicionais'}`
+    ];
+    window.open(`https://wa.me/5534999259499?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+  });
+}
 
 document.querySelectorAll('.map-toggle').forEach(button => {
   button.addEventListener('click', () => {
