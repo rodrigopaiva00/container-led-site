@@ -221,3 +221,11 @@
 .simulator-test-note{display:block;text-align:center;color:#5f6470;margin-top:12px}
 @media(max-width:960px){.simulator-access,.simulator-builder{grid-template-columns:1fr}.simulator-lead-form{border-left:0;border-top:1px solid #ffffff13}.result-grid-v2{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.simulator-access-copy,.simulator-lead-form,.simulator-workspace{padding:26px 20px}.simulator-workspace-heading{align-items:flex-start;flex-direction:column}.simulator-builder{gap:14px}.simulator-controls,.simulator-preview-result{padding:18px}.result-grid-v2{grid-template-columns:1fr 1fr}.simulator-security{justify-content:flex-start}}
+
+
+/* Identificação visual dos campos obrigatórios do simulador */
+.simulator-lead-form .field-label{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.simulator-lead-form .field-label b{color:#ff8b5e;background:#ff5a0018;border:1px solid #ff5a0050;border-radius:99px;padding:3px 7px;font-size:8px;letter-spacing:.12em}
+.simulator-lead-form .field-label i{color:#666d7a;font-style:normal;font-size:8px;letter-spacing:.12em}
+.simulator-lead-form .required-field input:invalid{border-color:#ff5a0068}
+.simulator-lead-form .required-field input:valid{border-color:#35c96c65}
