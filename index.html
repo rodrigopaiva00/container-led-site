@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
-  <script src="script.js?v=10" defer></script>
+  <link rel="stylesheet" href="styles.css?v=11">
+  <script src="script.js?v=11" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -30,24 +30,36 @@
   </header>
 
   <main id="conteudo">
-    <section class="hero">
+    <section class="hero hero-cinema">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
       <div class="container hero-content">
-        <div class="eyebrow"><span></span> DOOH • LED • CONECTIVIDADE</div>
-        <h1>Domine o <em>campo visual.</em></h1>
-        <p>Coloque sua marca em um dos pontos mais movimentados de Uberlândia, com mídia digital de alta visibilidade e presença todos os dias.</p>
+        <div class="eyebrow"><span></span> MÍDIA QUE NÃO PASSA DESPERCEBIDA</div>
+        <h1>Sua marca no <em>centro da atenção.</em></h1>
+        <p>Enquanto a cidade se movimenta, sua marca ocupa os pontos que todos veem. Painéis, projetos em LED e mídia digital pensados para gerar presença, lembrança e resultado.</p>
+        <div class="hero-trigger"><span></span> Pare de disputar atenção. Comece a dominar o cenário.</div>
         <div class="hero-actions">
-          <a class="button button-primary" href="#orcamento">Quero anunciar <span>↗</span></a>
-          <a class="button button-ghost" href="#paineis">Conhecer os painéis</a>
+          <a class="button button-primary" href="#orcamento">Quero ser visto <span>↗</span></a>
+          <a class="button button-ghost" href="#paineis">Ver nossos painéis</a>
         </div>
         <div class="hero-stats" aria-label="Diferenciais">
-          <div><strong>24/7</strong><span>presença e movimento</span></div>
-          <div><strong>Brasil</strong><span>atendimento nacional</span></div>
+          <div><strong>24/7</strong><span>presença em movimento</span></div>
+          <div><strong>Brasil</strong><span>soluções em todo o país</span></div>
           <div><strong>360º</strong><span>projetos sob medida</span></div>
         </div>
       </div>
-      <div class="hero-panel hero-photo" aria-label="Painel publicitário da Container LED"><img src="assets/painel-anselmo-alves.webp" alt="Painel publicitário da Container LED"></div>
+      <figure class="hero-panel hero-video-shell" aria-label="Container LED em movimento pela cidade">
+        <div class="hero-video-frame">
+          <video class="hero-main-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero/video-primeira-pagina-poster.webp">
+            <source src="assets/hero/video-primeira-pagina.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+          </video>
+          <div class="hero-video-glow" aria-hidden="true"></div>
+          <span class="hero-video-badge"><i></i> CONTAINER LED EM MOVIMENTO</span>
+          <button class="hero-video-toggle" type="button" aria-label="Pausar vídeo principal">Ⅱ</button>
+        </div>
+        <figcaption><small>VISIBILIDADE QUE ACOMPANHA A CIDADE</small><strong>Quem é visto, é lembrado.</strong></figcaption>
+      </figure>
     </section>
 
     <section class="marquee" aria-label="Soluções oferecidas"><div>PAINÉIS DE LED <span>✦</span> MÍDIA DIGITAL <span>✦</span> CONTAINER CONNECT <span>✦</span> PROJETOS ESPECIAIS <span>✦</span> PAINÉIS DE LED <span>✦</span> MÍDIA DIGITAL</div></section>
@@ -302,10 +314,41 @@
       </div>
     </section>
 
-    <section class="section company-section" id="empresa">
-      <div class="container company-grid">
-        <div class="company-art reveal"><img src="assets/container-led-logo.webp" alt="Container LED, empresa do Grupo Container"><div class="company-label">DESDE 2016<br>GRUPO CONTAINER</div></div>
-        <div class="company-copy reveal"><div class="eyebrow"><span></span> QUEM SOMOS</div><h2>Mais de uma década<br><em>transformando mercados.</em></h2><p>O Grupo Container surgiu em 2016, em Uberlândia/MG, com a proposta de transformar containers marítimos em experiências modernas, sofisticadas e inovadoras.</p><p>O que começou como uma ideia disruptiva evoluiu para um ecossistema empresarial sólido, conectando arquitetura modular, construção, estética, tecnologia e mídia digital. A Container LED é a frente do grupo dedicada à mídia DOOH e às soluções inteligentes de publicidade.</p><div class="values"><div><strong>Inovação</strong><span>para transformar o comum</span></div><div><strong>Coragem</strong><span>para romper padrões</span></div><div><strong>Visão</strong><span>para crescer com impacto</span></div></div></div>
+    <section class="section company-section company-authority" id="empresa">
+      <div class="company-authority-grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="company-authority-heading reveal">
+          <div>
+            <div class="eyebrow light"><span></span> QUEM SOMOS</div>
+            <p class="company-signature">GRUPO CONTAINER</p>
+            <h2>Uma década transformando<br><em>ideias em negócios.</em></h2>
+          </div>
+          <p>Um grupo empresarial nascido em Uberlândia para criar experiências, construir espaços e desenvolver marcas com identidade, coragem e visão de futuro.</p>
+        </div>
+        <div class="company-authority-grid">
+          <div class="company-art company-art-authority reveal">
+            <div class="company-art-halo" aria-hidden="true"></div>
+            <img src="assets/hero/grupo-container-logo.webp" alt="Logomarca oficial do Grupo Container">
+            <div class="company-seal"><small>DESDE</small><strong>2016</strong><span>UBERLÂNDIA · MG</span></div>
+            <div class="company-art-caption"><span>CONSTRUÍMOS</span><span>EXPERIÊNCIAS</span><span>MARCAS</span></div>
+          </div>
+          <div class="company-copy company-authority-copy reveal">
+            <p class="company-lead">O Grupo Container nasceu da capacidade de enxergar possibilidades onde outros viam apenas estruturas. Essa visão evoluiu para um ecossistema de empresas que atua em construção, hospitalidade, beleza e tecnologia visual.</p>
+            <p>Mais do que reunir negócios, o grupo conecta execução, inovação e experiência de marca. Cada empresa mantém sua especialidade, mas compartilha o mesmo compromisso: entregar projetos marcantes, atendimento próximo e crescimento consistente.</p>
+            <div class="group-proof" aria-label="Números do Grupo Container">
+              <div><strong>4</strong><span>frentes de negócios</span></div>
+              <div><strong>3</strong><span>barbearias em operação</span></div>
+              <div><strong>10+</strong><span>anos construindo história</span></div>
+            </div>
+            <div class="group-brands" aria-label="Empresas do Grupo Container">
+              <article><span>01</span><div><strong>Container Solution</strong><p>Construtora e soluções que transformam projetos em espaços reais.</p></div></article>
+              <article><span>02</span><div><strong>Kfé Container</strong><p>Cafeteria criada para unir convivência, identidade e experiência.</p></div></article>
+              <article><span>03</span><div><strong>Container Barber Club</strong><p>Três barbearias que combinam cuidado, estilo e padrão de atendimento.</p></div></article>
+              <article><span>04</span><div><strong>Container LED</strong><p>Tecnologia, mídia digital e soluções visuais que colocam marcas em evidência.</p></div></article>
+            </div>
+            <blockquote>“Negócios diferentes. Uma mesma visão: transformar o comum em algo memorável.”</blockquote>
+          </div>
+        </div>
       </div>
     </section>
 

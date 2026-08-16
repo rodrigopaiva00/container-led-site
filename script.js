@@ -210,4 +210,31 @@ document.addEventListener('visibilitychange', () => {
 });
 
 
+
+
+// Controle acessível do vídeo principal
+const heroMainVideo = document.querySelector('.hero-main-video');
+const heroMainVideoToggle = document.querySelector('.hero-video-toggle');
+
+const updateHeroVideoToggle = () => {
+  if (!heroMainVideo || !heroMainVideoToggle) return;
+  const playing = !heroMainVideo.paused;
+  heroMainVideoToggle.textContent = playing ? 'Ⅱ' : '▶';
+  heroMainVideoToggle.setAttribute('aria-label', playing ? 'Pausar vídeo principal' : 'Reproduzir vídeo principal');
+};
+
+if (heroMainVideo && heroMainVideoToggle) {
+  heroMainVideo.addEventListener('play', updateHeroVideoToggle);
+  heroMainVideo.addEventListener('pause', updateHeroVideoToggle);
+  heroMainVideoToggle.addEventListener('click', () => {
+    if (heroMainVideo.paused) {
+      heroMainVideo.play().catch(updateHeroVideoToggle);
+    } else {
+      heroMainVideo.pause();
+    }
+  });
+  updateHeroVideoToggle();
+}
+
+
 document.getElementById('year').textContent = new Date().getFullYear();
