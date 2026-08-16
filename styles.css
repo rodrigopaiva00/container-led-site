@@ -443,3 +443,341 @@
   .media-exterior-heading h2{font-size:43px}
   .media-exterior-heading>p{font-size:13px}
 }
+
+
+/* Centralização editorial: Segmentos, Grupo, Instagram e Brasil */
+.centered-section-heading{
+  display:block;
+  max-width:1080px;
+  margin:0 auto 55px;
+  text-align:center;
+}
+.centered-section-heading .eyebrow{justify-content:center}
+.centered-section-heading h2{
+  max-width:none;
+  font-size:clamp(44px,4.7vw,72px);
+  line-height:1.02;
+}
+.centered-section-heading>p{
+  max-width:720px;
+  margin:25px auto 0;
+  color:#999;
+}
+.segments-section{position:relative;overflow:hidden}
+.segments-section:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 50% 0,#ff5a0018,transparent 38%);
+  pointer-events:none;
+}
+.segments-section .container{position:relative}
+.segments-section .segments{
+  max-width:1020px;
+  margin-inline:auto;
+  justify-content:center;
+  gap:14px;
+}
+.segments-section .segments span{
+  min-width:150px;
+  padding:17px 25px;
+  text-align:center;
+  background:#ffffff05;
+  border-color:#ffffff1d;
+}
+
+.company-centered-heading{
+  display:block;
+  max-width:1100px;
+  margin:0 auto 64px;
+  padding-bottom:38px;
+  text-align:center;
+}
+.company-centered-heading .eyebrow{justify-content:center}
+.company-centered-heading .company-signature{margin:0 auto 13px}
+.company-centered-heading h2{
+  max-width:none;
+  font-size:clamp(48px,5vw,78px);
+  line-height:1;
+}
+.company-centered-heading>p{
+  max-width:760px;
+  margin:26px auto 0;
+  color:#aaa;
+  font-size:16px;
+  line-height:1.7;
+}
+
+/* Logomarca oficial completa, sem recorte */
+.brand-image{
+  width:190px;
+  height:58px;
+  overflow:visible;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.brand-image img{
+  position:static;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:left center;
+}
+.footer-brand{height:62px}
+
+/* Prévia moderna do Instagram */
+.instagram-profile-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 15%,#ff5a0022,transparent 32%),
+    radial-gradient(circle at 12% 88%,#8b2cff16,transparent 30%),
+    #0b0b0d;
+}
+.instagram-profile-section:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:linear-gradient(#ffffff07 1px,transparent 1px),linear-gradient(90deg,#ffffff07 1px,transparent 1px);
+  background-size:70px 70px;
+  mask-image:linear-gradient(180deg,#000,transparent 85%);
+  pointer-events:none;
+}
+.instagram-profile-section .container{position:relative}
+.instagram-heading h2{font-family:"Space Grotesk",sans-serif}
+.instagram-profile-stage{
+  display:grid;
+  grid-template-columns:1.35fr .65fr;
+  gap:22px;
+  max-width:1100px;
+  margin-inline:auto;
+  align-items:stretch;
+}
+.instagram-profile-card{
+  overflow:hidden;
+  border:1px solid #ffffff1c;
+  border-radius:24px;
+  background:#111216;
+  box-shadow:0 35px 90px #0009,0 0 0 1px #ff5a0018;
+}
+.instagram-profile-bar{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:15px;
+  align-items:center;
+  padding:22px;
+  border-bottom:1px solid #ffffff13;
+}
+.instagram-avatar{
+  width:58px;
+  height:58px;
+  padding:8px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#050505;
+  border:2px solid transparent;
+  background-image:linear-gradient(#050505,#050505),linear-gradient(135deg,#ffb000,#ff5a00,#a92cff);
+  background-origin:border-box;
+  background-clip:padding-box,border-box;
+}
+.instagram-avatar img{width:100%;height:100%;object-fit:contain}
+.instagram-profile-bar div{display:grid}
+.instagram-profile-bar strong{font:700 16px "Space Grotesk",sans-serif}
+.instagram-profile-bar div span{color:#777;font-size:10px}
+.instagram-profile-bar>a{
+  padding:9px 16px;
+  border-radius:9px;
+  background:#fff;
+  color:#111;
+  font-size:11px;
+  font-weight:800;
+}
+.instagram-bio{margin:0;padding:18px 22px 13px;color:#b8b8b8;font-size:12px}
+.instagram-highlights{display:flex;gap:18px;padding:4px 22px 22px}
+.instagram-highlights span{display:grid;justify-items:center;gap:5px;color:#888;font-size:9px}
+.instagram-highlights i{
+  width:46px;
+  height:46px;
+  border:1px solid #ffffff25;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  background:#19191c;
+  font:800 9px "Space Grotesk",sans-serif;
+  font-style:normal;
+}
+.instagram-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.instagram-preview-grid a{position:relative;aspect-ratio:1;overflow:hidden;background:#222}
+.instagram-preview-grid a:after{
+  content:"↗";
+  position:absolute;
+  right:10px;
+  top:8px;
+  width:27px;
+  height:27px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#000a;
+  opacity:0;
+  transition:.25s;
+}
+.instagram-preview-grid img{width:100%;height:100%;display:block;object-fit:cover;transition:.35s}
+.instagram-preview-grid a:hover img{transform:scale(1.06)}
+.instagram-preview-grid a:hover:after{opacity:1}
+.instagram-invite{
+  position:relative;
+  min-height:100%;
+  padding:38px 32px;
+  border:1px solid #ff5a0045;
+  border-radius:24px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:linear-gradient(155deg,#ff5a001b,#141414 46%,#080808);
+}
+.instagram-mark{
+  position:absolute;
+  right:-25px;
+  top:-70px;
+  color:#ff5a0026;
+  font:700 230px/1 "Space Grotesk",sans-serif;
+}
+.instagram-invite small{position:relative;color:var(--orange);font-size:9px;font-weight:800;letter-spacing:.18em}
+.instagram-invite h3{position:relative;margin:12px 0;font:700 35px/1.05 "Space Grotesk",sans-serif}
+.instagram-invite p{position:relative;color:#888;font-size:12px}
+.instagram-invite .button{position:relative;align-self:flex-start;margin-top:14px}
+.instagram-scanline{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 49.5%,#ff5a0018 50%,transparent 50.5%);
+  background-size:100% 18px;
+  opacity:.35;
+  pointer-events:none;
+}
+
+/* Atendimento em todo o Brasil */
+.national-section{
+  position:relative;
+  padding:110px 0;
+  background:
+    radial-gradient(circle at 50% 110%,#1f090030,transparent 42%),
+    linear-gradient(135deg,#ff6500,#f04a00);
+}
+.brazil-centered{
+  display:block;
+  text-align:center;
+}
+.national-heading{max-width:1000px;margin:0 auto 48px}
+.national-heading .eyebrow{justify-content:center}
+.national-heading h2{
+  max-width:none;
+  font-size:clamp(46px,5vw,76px);
+  line-height:1;
+}
+.national-heading p{max-width:740px;margin:25px auto 0;color:#ffe6d8}
+.national-coverage{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:20px;
+  max-width:1080px;
+  margin-inline:auto;
+  text-align:left;
+}
+.coverage-map{
+  position:relative;
+  min-height:390px;
+  overflow:hidden;
+  border-radius:24px;
+  border:1px solid #ffffff38;
+  background:#13080018;
+  box-shadow:inset 0 0 80px #5a180032;
+}
+.coverage-map strong{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-53%,-51%);
+  color:#250b002b;
+  font:800 300px/.75 "Space Grotesk",sans-serif;
+  letter-spacing:-.15em;
+}
+.coverage-map small{
+  position:absolute;
+  left:24px;
+  bottom:20px;
+  color:#fff;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.2em;
+}
+.coverage-dot{
+  position:absolute;
+  z-index:2;
+  width:12px;
+  height:12px;
+  border:3px solid #fff;
+  border-radius:50%;
+  background:#ff5a00;
+  box-shadow:0 0 0 7px #ffffff24,0 0 22px #fff;
+}
+.dot-one{left:34%;top:31%}.dot-two{left:61%;top:23%}.dot-three{left:68%;top:59%}.dot-four{left:42%;top:69%}
+.coverage-route{position:absolute;z-index:1;height:1px;background:#ffffff80;transform-origin:left}
+.route-one{width:30%;left:35%;top:33%;transform:rotate(-12deg)}
+.route-two{width:25%;left:61%;top:25%;transform:rotate(80deg)}
+.route-three{width:31%;left:43%;top:70%;transform:rotate(-35deg)}
+.coverage-services{display:grid;gap:12px}
+.coverage-services article{
+  display:grid;
+  grid-template-columns:64px 1fr;
+  gap:18px;
+  align-items:center;
+  min-height:122px;
+  padding:22px;
+  border-radius:18px;
+  border:1px solid #ffffff38;
+  background:#ffffff14;
+  backdrop-filter:blur(10px);
+}
+.coverage-services svg{
+  width:52px;
+  height:52px;
+  fill:none;
+  stroke:#fff;
+  stroke-width:2.5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.coverage-services article div{display:grid;gap:5px}
+.coverage-services strong{font:700 17px "Space Grotesk",sans-serif}
+.coverage-services span{color:#ffe3d5;font-size:11px;line-height:1.5}
+.national-cta{margin-top:32px;background:#fff;color:#161616}
+
+@media(max-width:960px){
+  .company-centered-heading{display:block}
+  .instagram-profile-stage,.national-coverage{grid-template-columns:1fr}
+  .instagram-invite{min-height:390px}
+  .coverage-map{min-height:320px}
+}
+@media(max-width:640px){
+  .centered-section-heading,.company-centered-heading{margin-bottom:38px}
+  .centered-section-heading h2,.company-centered-heading h2,.national-heading h2{font-size:43px}
+  .segments-section .segments span{min-width:calc(50% - 8px);padding:14px 10px}
+  .brand-image{width:155px;height:48px}
+  .instagram-profile-bar{grid-template-columns:auto 1fr}
+  .instagram-profile-bar>a{grid-column:1/-1;text-align:center}
+  .instagram-highlights{gap:10px;justify-content:space-between}
+  .instagram-preview-grid{grid-template-columns:repeat(2,1fr)}
+  .instagram-invite{min-height:340px;padding:28px 24px}
+  .instagram-invite h3{font-size:30px}
+  .national-section{padding:85px 0}
+  .coverage-map{min-height:270px}
+  .coverage-map strong{font-size:220px}
+  .coverage-services article{grid-template-columns:52px 1fr;padding:18px}
+  .coverage-services svg{width:43px;height:43px}
+}
