@@ -781,3 +781,212 @@
   .coverage-services article{grid-template-columns:52px 1fr;padding:18px}
   .coverage-services svg{width:43px;height:43px}
 }
+
+
+/* Revisão completa do layout mobile */
+@media(max-width:960px){
+  .hero-cinema{
+    display:block;
+    height:auto;
+    min-height:auto;
+    padding:110px 0 55px;
+    overflow:hidden;
+  }
+  .hero-layout{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:38px;
+    min-height:0;
+    padding:0;
+  }
+  .hero-cinema .hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:none;
+    min-width:0;
+    padding:0;
+  }
+  .hero-video-shell{
+    position:relative;
+    inset:auto;
+    z-index:1;
+    justify-self:center;
+    width:min(100%,430px);
+    max-width:430px;
+    height:min(145vw,650px);
+    margin:0 auto;
+    opacity:1;
+    transform:none;
+  }
+  .hero-video-frame{height:calc(100% - 72px)}
+  .hero-video-shell figcaption{
+    display:grid;
+    height:72px;
+    padding-top:14px;
+  }
+  .hero-cinema .hero-content>p{max-width:680px}
+  .company-authority-grid,.instagram-profile-stage,.national-coverage{grid-template-columns:1fr}
+}
+
+@media(max-width:640px){
+  :root{--container:min(100% - 32px,1180px)}
+  .site-header{padding:12px 0}
+  .site-header.scrolled{padding:8px 0}
+  .brand-image{width:158px;height:50px}
+  .menu-toggle{padding:8px 0 8px 12px}
+
+  .hero-cinema{
+    min-height:auto;
+    padding:96px 0 46px;
+  }
+  .hero-layout{gap:32px}
+  .hero-cinema .hero-content{padding-top:0}
+  .hero-cinema .eyebrow{
+    max-width:100%;
+    margin-bottom:20px;
+    font-size:9px;
+    line-height:1.45;
+    letter-spacing:.16em;
+  }
+  .hero-cinema h1{
+    max-width:100%;
+    font-size:clamp(44px,13vw,58px);
+    line-height:.98;
+    letter-spacing:-.055em;
+  }
+  .hero-cinema .hero-content>p{
+    max-width:100%;
+    margin:24px 0 16px;
+    font-size:14px;
+    line-height:1.65;
+  }
+  .hero-trigger{
+    max-width:100%;
+    margin-bottom:22px;
+    font-size:8px;
+    line-height:1.55;
+  }
+  .hero-actions{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    width:100%;
+  }
+  .hero-actions .button{
+    width:100%;
+    min-height:54px;
+    padding-inline:18px;
+  }
+  .hero-cinema .hero-stats{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+    margin-top:32px;
+    padding-top:20px;
+    border-top:1px solid #ffffff12;
+  }
+  .hero-stats div{min-width:0}
+  .hero-stats strong{font-size:20px}
+  .hero-stats span{
+    max-width:none;
+    font-size:9px;
+    line-height:1.35;
+  }
+  .hero-video-shell{
+    width:100%;
+    height:min(145vw,580px);
+    right:auto;
+    bottom:auto;
+    opacity:1;
+  }
+  .hero-video-frame{
+    height:calc(100% - 64px);
+    border-radius:16px;
+  }
+  .hero-video-shell figcaption{
+    display:grid;
+    height:64px;
+    padding:12px 3px 0;
+  }
+  .hero-video-shell figcaption strong{font-size:15px}
+  .hero-video-shell figcaption small{font-size:7px}
+  .hero-video-badge{top:13px;left:13px;font-size:7px}
+  .hero-video-toggle{width:38px;height:38px;right:12px;bottom:12px}
+
+  .section{padding:72px 0}
+  .centered-section-heading,.media-exterior-heading,.company-centered-heading{
+    width:100%;
+    margin-bottom:36px;
+  }
+  .centered-section-heading h2,
+  .media-exterior-heading h2,
+  .company-centered-heading h2,
+  .national-heading h2{
+    font-size:clamp(38px,11vw,46px);
+    line-height:1.02;
+    overflow-wrap:anywhere;
+  }
+  .centered-section-heading>p,
+  .media-exterior-heading>p,
+  .company-centered-heading>p,
+  .national-heading p{
+    max-width:100%;
+    margin-top:20px;
+    font-size:13px;
+    line-height:1.6;
+  }
+  .segments-section .segments{gap:10px}
+  .segments-section .segments span{
+    min-width:calc(50% - 5px);
+    padding:13px 8px;
+    font-size:11px;
+  }
+
+  .company-authority{padding-top:72px}
+  .company-centered-heading{padding-bottom:28px}
+  .company-art-authority{height:360px}
+  .company-art-authority img{max-width:88%;max-height:78%}
+  .company-authority-grid{gap:30px}
+  .group-proof strong{font-size:30px}
+
+  .instagram-profile-section{padding:72px 0}
+  .instagram-profile-stage{gap:16px}
+  .instagram-profile-bar{padding:18px}
+  .instagram-avatar{width:52px;height:52px}
+  .instagram-bio{padding:16px 18px 12px}
+  .instagram-highlights{padding:4px 18px 18px}
+  .instagram-invite{min-height:330px}
+
+  .national-section{padding:76px 0}
+  .national-heading{margin-bottom:34px}
+  .national-coverage{gap:14px}
+  .coverage-map{min-height:250px}
+  .coverage-map strong{font-size:200px}
+  .coverage-services article{
+    grid-template-columns:46px 1fr;
+    gap:13px;
+    min-height:112px;
+    padding:17px;
+  }
+  .coverage-services svg{width:40px;height:40px}
+  .coverage-services strong{font-size:15px}
+  .national-cta{width:100%;min-height:52px}
+
+  .whatsapp-float{
+    right:12px;
+    bottom:12px;
+    padding:10px 13px;
+  }
+  .footer-top{padding-bottom:42px}
+}
+
+@media(max-width:380px){
+  .hero-cinema h1{font-size:42px}
+  .hero-cinema .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-cinema .hero-stats div:last-child{grid-column:1/-1}
+  .segments-section .segments span{min-width:100%}
+  .instagram-preview-grid{grid-template-columns:1fr 1fr}
+}
