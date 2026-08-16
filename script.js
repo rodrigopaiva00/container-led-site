@@ -162,4 +162,52 @@ if (leadForm && simulator) {
   });
 }
 
+
+
+// Reprodução inteligente dos vídeos da seção Soluções
+const solutionVideos = document.querySelectorAll('.solution-video');
+
+const setSolutionVideoButton = (video, playing) => {
+  const button = video.closest('.solution-video-media')?.querySelector('.solution-video-toggle');
+  if (!button) return;
+  const title = button.dataset.title || 'Solução';
+  button.textContent = playing ? 'Ⅱ' : '▶';
+  button.setAttribute('aria-label', (playing ? 'Pausar vídeo de ' : 'Reproduzir vídeo de ') + title);
+};
+
+const solutionVideoObserver = 'IntersectionObserver' in window ? new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const video = entry.target;
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.32) {
+      video.play().then(() => setSolutionVideoButton(video, true)).catch(() => setSolutionVideoButton(video, false));
+    } else {
+      video.pause();
+      setSolutionVideoButton(video, false);
+    }
+  });
+}, { threshold: [0, 0.32, 0.65] }) : null;
+
+solutionVideos.forEach((video) => {
+  if (solutionVideoObserver) solutionVideoObserver.observe(video);
+  video.addEventListener('play', () => setSolutionVideoButton(video, true));
+  video.addEventListener('pause', () => setSolutionVideoButton(video, false));
+});
+
+document.querySelectorAll('.solution-video-toggle').forEach((button) => {
+  button.addEventListener('click', () => {
+    const video = button.closest('.solution-video-media')?.querySelector('.solution-video');
+    if (!video) return;
+    if (video.paused) {
+      video.play().catch(() => setSolutionVideoButton(video, false));
+    } else {
+      video.pause();
+    }
+  });
+});
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) solutionVideos.forEach((video) => video.pause());
+});
+
+
 document.getElementById('year').textContent = new Date().getFullYear();
