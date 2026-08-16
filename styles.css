@@ -366,11 +366,43 @@
 }
 
 
-/* Centralização do vídeo principal em monitores largos */
-@media(min-width:1450px){
+/* Hero em duas colunas: texto à esquerda e vídeo à direita, sem sobreposição */
+@media(min-width:961px){
+  .hero-cinema{display:block}
+  .hero-layout{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(330px,.65fr);
+    align-items:center;
+    gap:clamp(40px,5vw,90px);
+    min-height:100svh;
+    padding-top:100px;
+    padding-bottom:32px;
+  }
+  .hero-cinema .hero-content{
+    width:auto;
+    max-width:none;
+    min-width:0;
+    margin:0;
+    padding:0;
+    align-self:center;
+  }
+  .hero-cinema h1{
+    max-width:700px;
+    font-size:clamp(58px,5.4vw,92px);
+  }
+  .hero-cinema .hero-content>p{max-width:620px}
   .hero-video-shell{
-    left:calc(50% + 215px);
-    right:auto;
-    transform:translateX(-50%);
+    position:relative;
+    inset:auto;
+    align-self:center;
+    justify-self:end;
+    width:100%;
+    max-width:430px;
+    height:min(78vh,720px);
+    margin:0;
+    opacity:1;
+    transform:none;
   }
 }
