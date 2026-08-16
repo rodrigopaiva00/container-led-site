@@ -364,3 +364,13 @@
 @media(prefers-reduced-motion:reduce){
   .hero-video-glow{display:none}
 }
+
+
+/* Centralização do vídeo principal em monitores largos */
+@media(min-width:1450px){
+  .hero-video-shell{
+    left:calc(50% + 215px);
+    right:auto;
+    transform:translateX(-50%);
+  }
+}
