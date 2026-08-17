@@ -111,7 +111,7 @@ function updateSimulation() {
   preview.classList.toggle('portrait', width < height);
 
   const lines = [
-    'SIMULAÇÃO DE PROJETO — CONTAINER LED',
+    'SIMULAÇÃO SITE CONTAINER LED',
     '',
     'Empresa: ' + (simulatorLead.empresa || ''),
     'Contato: ' + (simulatorLead.nome || ''),
