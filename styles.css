@@ -1036,3 +1036,16 @@
     font-size:8px;
   }
 }
+
+
+/* Instagram em coluna única após remoção do bloco lateral */
+.instagram-profile-stage{
+  grid-template-columns:minmax(0,760px);
+  justify-content:center;
+  max-width:900px;
+  margin-inline:auto;
+}
+.instagram-profile-card{
+  width:100%;
+  max-width:760px;
+}
