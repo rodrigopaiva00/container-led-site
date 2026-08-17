@@ -1271,3 +1271,72 @@ body{
 .coverage-dot{
   transform:translate(-50%,-50%);
 }
+
+
+/* Mapa vetorial do Brasil — identidade laranja e Minas Gerais em destaque */
+.brazil-map-graphic{
+  position:absolute;
+  z-index:1;
+  inset:22px 28px 42px;
+  width:calc(100% - 56px);
+  height:calc(100% - 64px);
+  overflow:visible;
+  filter:drop-shadow(0 20px 34px #0008);
+}
+.brazil-state path{
+  fill:url(#br-map-fill);
+  fill-opacity:.42;
+  stroke:#ff9a55;
+  stroke-opacity:.68;
+  stroke-width:1.05;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  transition:fill-opacity .25s,stroke-opacity .25s;
+}
+.brazil-state:nth-child(3n) path{fill-opacity:.32}
+.brazil-state:nth-child(4n) path{fill-opacity:.5}
+.brazil-state.is-minas path{
+  fill:#ff6a00;
+  fill-opacity:1;
+  stroke:#fff;
+  stroke-width:3.2;
+  filter:url(#br-map-glow);
+}
+.brazil-map-links{
+  fill:none;
+  stroke:#ffd2b3;
+  stroke-width:1.2;
+  stroke-opacity:.56;
+  stroke-linecap:round;
+}
+.brazil-map-links circle{
+  fill:#fff;
+  stroke:#ff5a00;
+  stroke-width:3;
+  filter:url(#br-map-glow);
+}
+.brazil-map-links .map-hub{
+  fill:#ff5a00;
+  stroke:#fff;
+  stroke-width:3.5;
+}
+.minas-label circle{
+  fill:#080808;
+  stroke:#ff7a00;
+  stroke-width:2;
+  filter:url(#br-map-glow);
+}
+.minas-label text{
+  fill:#fff;
+  font:800 11px "Space Grotesk",sans-serif;
+  letter-spacing:.08em;
+}
+.coverage-map:hover .brazil-state path{fill-opacity:.55}
+.coverage-map:hover .brazil-state.is-minas path{fill-opacity:1}
+@media(max-width:640px){
+  .brazil-map-graphic{
+    inset:16px 20px 38px;
+    width:calc(100% - 40px);
+    height:calc(100% - 54px);
+  }
+}
