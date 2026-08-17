@@ -41,22 +41,40 @@ document.querySelectorAll('[data-interest]').forEach(link => {
 });
 
 const quoteForm = document.getElementById('quote-form');
+const quoteEmailCopy = document.getElementById('quote-email-copy');
+
+function getQuoteMessage() {
+  const data = new FormData(quoteForm);
+  const lines = [
+    'FORMULÁRIO DE INTERESSE - SITE CONTAINER LED',
+    '',
+    'Nome: ' + (data.get('nome') || 'Não informado'),
+    'Empresa: ' + (data.get('empresa') || 'Não informada'),
+    'WhatsApp: ' + (data.get('telefone') || 'Não informado'),
+    'Cidade/UF: ' + (data.get('cidade') || 'Não informada'),
+    'Interesse: ' + (data.get('interesse') || 'Não selecionado'),
+    'Detalhes do projeto: ' + (data.get('mensagem') || 'Sem detalhes adicionais')
+  ];
+  return { lines: lines, subject: 'Formulário de interesse - ' + (data.get('nome') || 'Novo contato') };
+}
+
+function updateQuoteEmail() {
+  if (!quoteEmailCopy || !quoteForm) return;
+  const message = getQuoteMessage();
+  quoteEmailCopy.href = 'mailto:containerled08@gmail.com?subject=' + encodeURIComponent(message.subject) + '&body=' + encodeURIComponent(message.lines.join('\n'));
+}
+
 if (quoteForm) {
+  quoteForm.addEventListener('input', updateQuoteEmail);
+  quoteForm.addEventListener('change', updateQuoteEmail);
   quoteForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const lines = [
-      'Olá! Vim pelo site da Container LED e gostaria de solicitar informações.',
-      '',
-      `Nome: ${data.get('nome')}`,
-      `Empresa: ${data.get('empresa') || 'Não informada'}`,
-      `WhatsApp: ${data.get('telefone')}`,
-      `Cidade/UF: ${data.get('cidade')}`,
-      `Interesse: ${data.get('interesse')}`,
-      `Mensagem: ${data.get('mensagem') || 'Sem detalhes adicionais'}`
-    ];
-    window.open(`https://wa.me/5534999259499?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+    if (!quoteForm.reportValidity()) return;
+    const message = getQuoteMessage();
+    updateQuoteEmail();
+    window.open('https://wa.me/5534999259499?text=' + encodeURIComponent(message.lines.join('\n')), '_blank', 'noopener');
   });
+  updateQuoteEmail();
 }
 
 document.querySelectorAll('.map-toggle').forEach(button => {
