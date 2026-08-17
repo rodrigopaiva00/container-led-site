@@ -1237,3 +1237,13 @@ body{
   color:#fff;
   border:1px solid #ffffff20;
 }
+
+
+/* A faixa de serviços também acompanha o fundo escuro */
+.marquee{
+  background:#0d0d0d;
+  color:#fff;
+  border-top:1px solid #ff5a0048;
+  border-bottom:1px solid #ffffff12;
+}
+.marquee span{color:#d8d8d8}
