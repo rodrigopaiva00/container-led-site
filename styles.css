@@ -1340,3 +1340,86 @@ body{
     height:calc(100% - 54px);
   }
 }
+
+
+/* Clareza dos dois fluxos comerciais e menu mobile */
+.simulator-access-copy>p strong{
+  display:block;
+  margin-bottom:8px;
+  color:#fff;
+  font-size:1.05em;
+}
+.simulator-purpose-note,.quote-purpose-note{
+  display:grid;
+  gap:7px;
+  margin:24px 0;
+  padding:18px 20px;
+  border:1px solid rgba(255,90,0,.34);
+  border-left:3px solid var(--orange);
+  border-radius:14px;
+  background:linear-gradient(135deg,rgba(255,90,0,.11),rgba(255,90,0,.025));
+}
+.simulator-purpose-note b,.quote-purpose-note strong{
+  color:var(--orange);
+  font-size:11px;
+  letter-spacing:.14em;
+}
+.simulator-purpose-note span,.quote-purpose-note span{
+  color:#c8c8c8;
+  font-size:13px;
+  line-height:1.6;
+}
+.quote-form-intro{
+  display:grid;
+  gap:4px;
+  margin-bottom:8px;
+  padding-bottom:18px;
+  border-bottom:1px solid #ffffff16;
+}
+.quote-form-intro strong{color:#fff;font-size:18px}
+.quote-form-intro span{color:#8f8f8f;font-size:13px;line-height:1.55}
+.quote-submit-actions{display:grid;gap:10px;margin-top:4px}
+.quote-submit-actions .button{width:100%;min-height:52px}
+.quote-email-copy{border-color:#ffffff2b;color:#fff;background:#ffffff05}
+.quote-email-copy:hover{background:#fff;color:#111}
+
+@media(max-width:960px){
+  .site-header .nav-wrap{position:relative}
+  .brand-image{position:relative;z-index:103}
+  .menu-toggle{
+    position:relative;
+    z-index:103;
+    width:44px;
+    height:44px;
+    display:grid;
+    align-content:center;
+    justify-items:end;
+    gap:5px;
+  }
+  .menu-toggle span{
+    width:28px;
+    height:2px;
+    margin:0;
+    border-radius:99px;
+    transition:transform .25s,opacity .2s,width .25s;
+  }
+  .menu-toggle span:nth-child(2){width:22px}
+  .menu-toggle.open span:nth-child(1){width:28px;transform:translateY(7px) rotate(45deg)}
+  .menu-toggle.open span:nth-child(2){opacity:0;transform:translateX(8px)}
+  .menu-toggle.open span:nth-child(3){width:28px;transform:translateY(-7px) rotate(-45deg)}
+  .main-nav{
+    z-index:102;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+  }
+  .main-nav .nav-cta{
+    padding:0;
+    border:0;
+    border-radius:0;
+    background:none;
+  }
+}
+@media(max-width:640px){
+  .simulator-purpose-note,.quote-purpose-note{margin:20px 0;padding:16px}
+  .quote-form-intro strong{font-size:17px}
+}
