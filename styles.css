@@ -1247,3 +1247,27 @@ body{
   border-bottom:1px solid #ffffff12;
 }
 .marquee span{color:#d8d8d8}
+
+
+/* Rede nacional: linhas alinhadas ao centro exato dos marcadores */
+.coverage-network{
+  position:absolute;
+  z-index:1;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:visible;
+  pointer-events:none;
+}
+.coverage-network polyline{
+  fill:none;
+  stroke:#ff7a00;
+  stroke-width:.42;
+  vector-effect:non-scaling-stroke;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  filter:drop-shadow(0 0 5px #ff5a0080);
+}
+.coverage-dot{
+  transform:translate(-50%,-50%);
+}
