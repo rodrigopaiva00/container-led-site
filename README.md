@@ -4,7 +4,7 @@ Site estático publicado no Cloudflare Pages, com uma Pages Function para o envi
 
 ## Modo de teste
 
-As configurações ficam centralizadas no início de `script-v16.js`:
+As configurações ficam centralizadas no início de `script-v17.js`:
 
 - `TEST_MODE: true`
 - `TEST_WHATSAPP: 5534998940736`
@@ -15,7 +15,7 @@ Com `TEST_MODE = true`, os links gerados pelo simulador e pelo formulário abrem
 
 ## Configuração do e-mail no Cloudflare Pages
 
-O frontend chama `/api/send-email`. A função está em `functions/api/send-email.js` e usa a API do Resend. Nenhuma credencial fica no navegador ou no repositório.
+O frontend chama `/api/contact-delivery`. A função está em `functions/api/contact-delivery.js` e usa a API do Resend. Nenhuma credencial fica no navegador ou no repositório.
 
 No painel do Cloudflare:
 
