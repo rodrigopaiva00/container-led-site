@@ -4,14 +4,14 @@ Site estático publicado no Cloudflare Pages, com uma Pages Function para o envi
 
 ## Modo de teste
 
-As configurações ficam centralizadas no início de `script-v17.js`:
+As configurações ficam centralizadas no início de `script-v18.js`:
 
-- `TEST_MODE: true`
+- `TEST_MODE`: ativado somente quando a URL contém `?test=1`
 - `TEST_WHATSAPP: 5534998940736`
 - `OFFICIAL_WHATSAPP: 5534999259499`
 - `COMPANY_EMAIL: containerled08@gmail.com`
 
-Com `TEST_MODE = true`, os links gerados pelo simulador e pelo formulário abrem apenas o WhatsApp de validação. Para produção, altere somente `TEST_MODE` para `false`.
+Na URL pública normal, os links usam o WhatsApp oficial. Para validar os fluxos sem afetar o atendimento oficial, acesse `https://container-led-site.pages.dev/?test=1#simulador`; nessa URL os links usam exclusivamente o WhatsApp de teste.
 
 ## Configuração do e-mail no Cloudflare Pages
 
