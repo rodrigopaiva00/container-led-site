@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles-v26.css">
-  <script src="script-v15.js" defer></script>
+  <script src="script-v16.js" defer></script>
   <style>
     @media(max-width:960px){
       .main-nav.open{transform:translateX(0)!important}
@@ -242,6 +242,7 @@
         <div class="simulator-access" id="simulator-access">
           <div class="simulator-access-copy reveal">
             <div class="simulator-badge"><span></span> SIMULADOR GRATUITO</div>
+            <small class="simulator-test-note">MODO DE TESTE — envios direcionados para contatos de validação.</small>
             <h2>Veja seu painel LED<br><em>antes de comprar.</em></h2>
             <p><strong>Para quem deseja comprar uma tela ou painel de LED.</strong> Informe as características do projeto e receba uma estimativa técnica de dimensões, resolução, peso e consumo de energia — gratuitamente e sem compromisso.</p><div class="simulator-purpose-note"><b>SIMULADOR DE COMPRA DE TELA</b><span>Ao finalizar, você poderá encaminhar o resultado completo para o atendimento pelo WhatsApp e enviar uma cópia por e-mail.</span></div>
             <ul>
@@ -270,7 +271,7 @@
           </div>
           <div class="simulator-builder">
             <form class="simulator-controls" id="led-simulator">
-              <div class="form-row"><label>Tipo de solução<select name="ambiente"><option value="outdoor">Painel outdoor</option><option value="indoor">Painel indoor</option><option value="totem">Totem digital</option><option value="testeira">Testeira para posto</option></select></label><label>Aplicação<select name="aplicacao"><option>Fachada comercial</option><option>Loja ou recepção</option><option>Shopping center</option><option>Restaurante</option><option>Posto de combustível</option><option>Empreendimento ou terreno</option></select></label></div>
+              <div class="form-row"><label>Tipo de solução<select name="ambiente"><option value="outdoor">Painel outdoor</option><option value="indoor">Painel indoor</option><option value="totem">Totem digital</option><option value="testeira">Testeira para posto</option></select></label><label>Aplicação<select name="aplicacao"><option>Fachada comercial</option><option>Fachada comercial / publicidade</option><option>Loja ou recepção</option><option>Shopping center</option><option>Restaurante</option><option>Posto de combustível</option><option>Empreendimento ou terreno</option></select></label></div>
               <div class="form-row"><label>Largura (m)<input type="number" name="largura" min="0.5" max="30" step="0.1" value="4" required></label><label>Altura (m)<input type="number" name="altura" min="0.5" max="20" step="0.1" value="2" required></label></div>
               <div class="form-row"><label>Pixel pitch<select name="pitch"><option value="2.5">P2.5 — curta distância</option><option value="3">P3 — alta definição</option><option value="4">P4 — uso versátil</option><option value="6" selected>P6 — outdoor</option><option value="8">P8 — longa distância</option><option value="10">P10 — grandes formatos</option></select></label><label>Uso diário (horas)<input type="number" name="horas" min="1" max="24" step="1" value="12" required></label></div>
               <label>Tarifa de energia (R$/kWh)<input type="number" name="tarifa" min="0.1" max="5" step="0.01" value="0.95" required></label>
@@ -290,8 +291,9 @@
                 </div>
                 <p class="simulator-disclaimer">Estimativa preliminar. Estrutura, instalação elétrica, ventilação e condições do local dependem de avaliação técnica.</p>
                 <a class="button button-primary" id="simulator-whatsapp" href="#" target="_blank" rel="noopener">ENVIAR RESULTADO PELO WHATSAPP <span>↗</span></a>
-                <a class="simulator-email-link" id="simulator-email" href="#">Enviar cópia por e-mail de teste</a>
-                <small class="simulator-test-note">Modo de teste: resultado direcionado apenas aos contatos informados para validação.</small>
+                <button class="simulator-email-link" id="simulator-email" type="button">Enviar cópia por e-mail de teste</button>
+                <small class="simulator-test-note">MODO DE TESTE — envios direcionados para contatos de validação.</small>
+                <p class="form-note" id="simulator-send-status" role="status" aria-live="polite"></p>
               </div>
             </div>
           </div>
@@ -433,9 +435,9 @@
         <form class="contact-form reveal" id="quote-form"><div class="quote-form-intro"><strong>Preencha seus dados</strong><span>Leva menos de 2 minutos e ajuda nossa equipe a entender exatamente o que você procura.</span></div>
           <div class="form-row"><label>Nome<input name="nome" required autocomplete="name" placeholder="Como podemos chamar você?"></label><label>Empresa<input name="empresa" autocomplete="organization" placeholder="Nome da empresa"></label></div>
           <div class="form-row"><label>WhatsApp<input name="telefone" required inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"></label><label>Cidade / UF<input name="cidade" required autocomplete="address-level2" placeholder="Sua localização"></label></div>
-          <label>Tenho interesse em<select name="interesse" required><option value="">Selecione uma opção</option><option>Publicidade em painel de LED</option><option>Container Connect — anunciar</option><option>Container Connect — ser ponto parceiro</option><option>Solução corporativa em LED</option><option>Outro projeto</option></select></label>
+          <label>Tenho interesse em<select name="interesse" required><option value="">Selecione uma opção</option><option>Comprar um painel de LED</option><option>Publicidade em painel de LED</option><option>Container Connect — anunciar</option><option>Container Connect — ser ponto parceiro</option><option>Solução corporativa em LED</option><option>Outro projeto</option></select></label>
           <label>Conte um pouco sobre o projeto<textarea name="mensagem" rows="4" placeholder="Objetivo, prazo ou outras informações"></textarea></label>
-          <div class="quote-submit-actions"><button class="button button-primary submit-button" type="submit">Enviar interesse pelo WhatsApp <span>↗</span></button><a class="button button-outline quote-email-copy" id="quote-email-copy" href="mailto:containerled08@gmail.com">Enviar cópia por e-mail</a></div><p class="form-note">Nenhum dado é armazenado neste site.</p>
+          <div class="quote-submit-actions"><button class="button button-primary submit-button" type="submit">Enviar interesse pelo WhatsApp <span>↗</span></button><button class="button button-outline quote-email-copy" id="quote-email-copy" type="button">Enviar cópia por e-mail</button></div><p class="form-note">Nenhum dado é armazenado neste site.</p><p class="form-note" id="quote-send-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
