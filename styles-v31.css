@@ -1,0 +1,13 @@
+@import url("styles-v30.css");
+
+/* Correção final do menu mobile: mantém o painel dentro do viewport */
+@media (max-width:960px){
+  body.menu-open .main-nav,
+  .site-header .main-nav.open{
+    inset:0 !important;
+    left:0 !important;
+    right:0 !important;
+    width:100vw !important;
+    transform:none !important;
+  }
+}
