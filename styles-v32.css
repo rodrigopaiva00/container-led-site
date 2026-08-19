@@ -1,0 +1,10 @@
+@import url("styles-v31.css");
+
+/* Abertura imediata evita o painel ficar preso fora do viewport em navegadores móveis */
+@media (max-width:960px){
+  body.menu-open .main-nav,
+  .site-header .main-nav.open{
+    transform:translateX(0) !important;
+    transition:none !important;
+  }
+}
