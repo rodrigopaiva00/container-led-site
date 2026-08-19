@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles-v26.css">
-  <script src="script-v18.js" defer></script>
+  <link rel="stylesheet" href="styles-v27.css">
+  <script src="script-v19.js" defer></script>
   <style>
     @media(max-width:960px){
       .main-nav.open{transform:translateX(0)!important}
@@ -28,7 +28,6 @@
         <a href="#paineis">Nossos painéis</a>
         <a href="#connect">Container Connect</a>
         <a href="#solucoes">Soluções</a>
-        <a href="#simulador">Simulador grátis</a>
         <a href="#empresa">A empresa</a>
         <a class="nav-cta" href="#orcamento">Solicitar orçamento</a>
       </nav>
@@ -47,7 +46,7 @@
         <div class="hero-trigger"><span></span> Pare de disputar atenção. Comece a dominar o cenário.</div>
         <div class="hero-actions">
           <a class="button button-primary" href="#orcamento">Quero ser visto <span>↗</span></a>
-          <a class="button button-ghost" href="#paineis">Ver nossos painéis</a>
+          <a class="button button-ghost" href="#paineis">Ver nossos painéis</a><a class="hero-simulator-link" href="#simulador">Simule seu painel grátis <span>→</span></a>
         </div>
         <div class="hero-stats" aria-label="Diferenciais">
           <div><strong>24/7</strong><span>presença em movimento</span></div>
@@ -237,70 +236,6 @@
     </section>
 
 
-    <section class="section simulator-section simulator-v2-section" id="simulador">
-      <div class="container">
-        <div class="simulator-access" id="simulator-access">
-          <div class="simulator-access-copy reveal">
-            <div class="simulator-badge"><span></span> SIMULADOR GRATUITO</div>
-            <small class="simulator-test-note">MODO DE TESTE — envios direcionados para contatos de validação.</small>
-            <h2>Veja seu painel LED<br><em>antes de comprar.</em></h2>
-            <p><strong>Para quem deseja comprar uma tela ou painel de LED.</strong> Informe as características do projeto e receba uma estimativa técnica de dimensões, resolução, peso e consumo de energia — gratuitamente e sem compromisso.</p><div class="simulator-purpose-note"><b>SIMULADOR DE COMPRA DE TELA</b><span>Ao finalizar, você poderá encaminhar o resultado completo para o atendimento pelo WhatsApp e enviar uma cópia por e-mail.</span></div>
-            <ul>
-              <li>Simulação em tempo real</li>
-              <li>Especificações técnicas instantâneas</li>
-              <li>Resultado pronto para WhatsApp e e-mail</li>
-              <li>Atendimento consultivo da Container LED</li>
-            </ul>
-          </div>
-          <form class="simulator-lead-form reveal" id="simulator-lead-form">
-            <div class="simulator-form-intro"><strong>Preencha para acessar</strong><span>Acesso gratuito e imediato após o cadastro</span></div>
-            <label class="required-field"><span class="field-label">Nome da empresa <b>OBRIGATÓRIO</b></span><input name="empresa" required aria-required="true" placeholder="Ex.: Restaurante do João" autocomplete="organization"></label>
-            <label class="required-field"><span class="field-label">Seu nome <b>OBRIGATÓRIO</b></span><input name="nome" required aria-required="true" placeholder="Nome completo" autocomplete="name"></label>
-            <div class="form-row"><label><span class="field-label">CNPJ ou CPF <i>OPCIONAL</i></span><input name="documento" placeholder="00.000.000/0001-00" inputmode="numeric"></label><label class="required-field"><span class="field-label">WhatsApp <b>OBRIGATÓRIO</b></span><input name="whatsapp" required aria-required="true" placeholder="(34) 99999-9999" inputmode="tel" autocomplete="tel"></label></div>
-            <label><span class="field-label">E-mail <i>OPCIONAL</i></span><input name="email" type="email" placeholder="seuemail@empresa.com" autocomplete="email"></label>
-            <label class="simulator-consent"><input type="checkbox" required> <span>Autorizo o uso destes dados somente para receber o resultado e atendimento sobre este projeto.</span></label>
-            <button class="button button-primary submit-button" type="submit">ACESSAR O SIMULADOR GRÁTIS <span>→</span></button>
-            <div class="simulator-security"><span>🔒 Dados não armazenados</span><span>⚡ Acesso imediato</span><span>⊘ Sem spam</span></div>
-          </form>
-        </div>
-
-        <div class="simulator-workspace" id="simulator-workspace" hidden>
-          <div class="simulator-workspace-heading">
-            <div><div class="simulator-badge"><span></span> SIMULAÇÃO EM TEMPO REAL</div><h2>Configure seu <em>projeto LED.</em></h2></div>
-            <button class="simulator-reset" id="simulator-reset" type="button">Alterar cadastro</button>
-          </div>
-          <div class="simulator-builder">
-            <form class="simulator-controls" id="led-simulator">
-              <div class="form-row"><label>Tipo de solução<select name="ambiente"><option value="outdoor">Painel outdoor</option><option value="indoor">Painel indoor</option><option value="totem">Totem digital</option><option value="testeira">Testeira para posto</option></select></label><label>Aplicação<select name="aplicacao"><option>Fachada comercial</option><option>Fachada comercial / publicidade</option><option>Loja ou recepção</option><option>Shopping center</option><option>Restaurante</option><option>Posto de combustível</option><option>Empreendimento ou terreno</option></select></label></div>
-              <div class="form-row"><label>Largura (m)<input type="number" name="largura" min="0.5" max="30" step="0.1" value="4" required></label><label>Altura (m)<input type="number" name="altura" min="0.5" max="20" step="0.1" value="2" required></label></div>
-              <div class="form-row"><label>Pixel pitch<select name="pitch"><option value="2.5">P2.5 — curta distância</option><option value="3">P3 — alta definição</option><option value="4">P4 — uso versátil</option><option value="6" selected>P6 — outdoor</option><option value="8">P8 — longa distância</option><option value="10">P10 — grandes formatos</option></select></label><label>Uso diário (horas)<input type="number" name="horas" min="1" max="24" step="1" value="12" required></label></div>
-              <label>Tarifa de energia (R$/kWh)<input type="number" name="tarifa" min="0.1" max="5" step="0.01" value="0.95" required></label>
-              <button class="button button-primary submit-button" type="submit">CALCULAR MEU PAINEL <span>→</span></button>
-            </form>
-            <div class="simulator-preview-result">
-              <div class="led-preview-wrap"><div class="led-preview" id="led-preview"><span>CONTAINER</span><strong>LED</strong><small id="preview-size">4,0 × 2,0 m</small></div></div>
-              <div class="simulator-result" id="simulator-result" aria-live="polite">
-                <small>RESULTADO DO PROJETO</small>
-                <div class="result-grid result-grid-v2">
-                  <div><strong id="result-area">8,0 m²</strong><span>área total</span></div>
-                  <div><strong id="result-resolution">667 × 333 px</strong><span>resolução estimada</span></div>
-                  <div><strong id="result-weight">336 kg</strong><span>peso estimado</span></div>
-                  <div><strong id="result-power">6,0 kW</strong><span>potência máxima</span></div>
-                  <div><strong id="result-consumption">907 kWh/mês</strong><span>consumo estimado</span></div>
-                  <div><strong id="result-cost">R$ 862/mês</strong><span>custo de energia</span></div>
-                </div>
-                <p class="simulator-disclaimer">Estimativa preliminar. Estrutura, instalação elétrica, ventilação e condições do local dependem de avaliação técnica.</p>
-                <a class="button button-primary" id="simulator-whatsapp" href="#" target="_blank" rel="noopener">ENVIAR RESULTADO PELO WHATSAPP <span>↗</span></a>
-                <button class="simulator-email-link" id="simulator-email" type="button">Enviar cópia por e-mail de teste</button>
-                <small class="simulator-test-note">MODO DE TESTE — envios direcionados para contatos de validação.</small>
-                <p class="form-note" id="simulator-send-status" role="status" aria-live="polite"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section dark-section segments-section" id="segmentos">
       <div class="container">
         <div class="section-heading centered-section-heading reveal">
@@ -431,17 +366,70 @@
 
     <section class="section quote-section" id="orcamento">
       <div class="container quote-grid">
-        <div class="quote-copy reveal"><div class="eyebrow light"><span></span> FORMULÁRIO DE INTERESSE</div><h2>Conte o que você precisa.<br><em>Nós direcionamos o atendimento.</em></h2><p>Use este formulário para anunciar nos painéis, comprar ou instalar uma tela, adquirir um totem, apresentar um ponto parceiro ou solicitar outra solução. Quanto mais detalhes você informar, mais preciso será o primeiro contato da nossa equipe.</p><div class="quote-purpose-note"><strong>ATENDIMENTO PELO WHATSAPP</strong><span>Ao enviar, abriremos o WhatsApp com seus dados e interesse já organizados. Você também poderá enviar uma cópia por e-mail.</span></div><div class="direct-contact"><a href="https://wa.me/5534999259499" target="_blank" rel="noopener"><small>WHATSAPP</small><strong>(34) 99925-9499</strong></a><a href="mailto:containerled08@gmail.com"><small>E-MAIL</small><strong>containerled08@gmail.com</strong></a></div></div>
+        <div class="quote-copy reveal"><div class="eyebrow light"><span></span> FORMULÁRIO DE INTERESSE</div><h2>Muitas possibilidades começam aqui.<br><em>Descubra onde a Container LED pode te levar.</em></h2><p>Use este formulário para anunciar nos painéis, comprar ou instalar uma tela, adquirir um totem, apresentar um ponto parceiro ou solicitar outra solução. Quanto mais detalhes você informar, mais preciso será o primeiro contato da nossa equipe.</p><div class="quote-purpose-note"><strong>ATENDIMENTO PELO WHATSAPP</strong><span>Ao enviar, abriremos o WhatsApp com seus dados e interesse já organizados. Você também poderá enviar uma cópia por e-mail.</span></div><div class="direct-contact"><a href="https://wa.me/5534999259499" target="_blank" rel="noopener"><small>WHATSAPP</small><strong>(34) 99925-9499</strong></a><a href="mailto:containerled08@gmail.com"><small>E-MAIL</small><strong>containerled08@gmail.com</strong></a></div></div>
         <form class="contact-form reveal" id="quote-form"><div class="quote-form-intro"><strong>Preencha seus dados</strong><span>Leva menos de 2 minutos e ajuda nossa equipe a entender exatamente o que você procura.</span></div>
           <div class="form-row"><label>Nome<input name="nome" required autocomplete="name" placeholder="Como podemos chamar você?"></label><label>Empresa<input name="empresa" autocomplete="organization" placeholder="Nome da empresa"></label></div>
           <div class="form-row"><label>WhatsApp<input name="telefone" required inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"></label><label>Cidade / UF<input name="cidade" required autocomplete="address-level2" placeholder="Sua localização"></label></div>
-          <label>Tenho interesse em<select name="interesse" required><option value="">Selecione uma opção</option><option>Comprar um painel de LED</option><option>Publicidade em painel de LED</option><option>Container Connect — anunciar</option><option>Container Connect — ser ponto parceiro</option><option>Solução corporativa em LED</option><option>Outro projeto</option></select></label>
+          <label>Tenho interesse em<select name="interesse" required><option value="">Selecione uma opção</option><option>Comprar um painel de LED</option><option>Publicidade em painel de LED</option><option>Container Connect — anunciar</option><option>Container Connect — ser ponto parceiro</option><option>Outro projeto</option></select></label>
+          <div class="quote-simulator-entry" id="quote-simulator-entry" hidden>
+            <div><small>SIMULADOR DE PAINEL GRÁTIS</small><strong>Quer visualizar uma estimativa antes de falar com a equipe?</strong><span>Informe medidas aproximadas e gere seu painel em instantes.</span></div>
+            <a class="button button-outline" href="#simulador">Acessar simulador grátis <span>→</span></a>
+          </div>
           <label>Conte um pouco sobre o projeto<textarea name="mensagem" rows="4" placeholder="Objetivo, prazo ou outras informações"></textarea></label>
           <div class="quote-submit-actions"><button class="button button-primary submit-button" type="submit">Enviar interesse pelo WhatsApp <span>↗</span></button><button class="button button-outline quote-email-copy" id="quote-email-copy" type="button">Enviar cópia por e-mail</button></div><p class="form-note">Nenhum dado é armazenado neste site.</p><p class="form-note" id="quote-send-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
+    <section class="section quick-simulator-section" id="simulador">
+      <div class="simulator-grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="quick-simulator-heading reveal">
+          <div class="eyebrow light"><span></span> SIMULADOR DE PAINEL GRÁTIS</div>
+          <h2>Seu projeto de LED<br><em>começa em instantes.</em></h2>
+          <p>Escolha o tipo de painel, informe as medidas aproximadas e veja uma estimativa visual e técnica. Sem cadastro para começar e sem compromisso.</p>
+        </div>
+        <div class="quick-simulator-shell reveal">
+          <form class="quick-project-form" id="led-simulator">
+            <div class="quick-form-title"><strong>Configure seu painel</strong><span>Use medidas inteiras aproximadas do local.</span></div>
+            <div class="quick-fields">
+              <label><span>Tipo de solução</span><select name="ambiente" required><option value="outdoor">Painel outdoor</option><option value="indoor">Painel indoor</option><option value="testeira">Testeira para posto</option></select></label>
+              <label><span>Aplicação</span><select name="aplicacao" required><option>Fachada comercial</option><option>Ambiente interno</option><option>Área externa</option><option>Posto de combustível</option><option>Shopping center</option><option>Residencial</option><option>Outros</option></select></label>
+              <label><span>Largura (m)</span><select name="largura" required><option value="1">1 m</option><option value="2" selected>2 m</option><option value="3">3 m</option><option value="4">4 m</option><option value="5">5 m</option><option value="6">6 m</option><option value="7">7 m</option><option value="8">8 m</option><option value="9">9 m</option><option value="10">10 m</option><option value="11">11 m</option><option value="12">12 m</option><option value="13">13 m</option><option value="14">14 m</option><option value="15">15 m</option><option value="16">16 m</option><option value="17">17 m</option><option value="18">18 m</option><option value="19">19 m</option><option value="20">20 m</option></select></label>
+              <label><span>Altura (m)</span><select name="altura" required><option value="1">1 m</option><option value="2">2 m</option><option value="3">3 m</option><option value="4" selected>4 m</option><option value="5">5 m</option><option value="6">6 m</option><option value="7">7 m</option><option value="8">8 m</option><option value="9">9 m</option><option value="10">10 m</option><option value="11">11 m</option><option value="12">12 m</option><option value="13">13 m</option><option value="14">14 m</option><option value="15">15 m</option><option value="16">16 m</option><option value="17">17 m</option><option value="18">18 m</option><option value="19">19 m</option><option value="20">20 m</option></select></label>
+            </div>
+            <button class="button button-primary simulator-generate" type="submit">GERAR PAINEL DE LED <span>→</span></button>
+          </form>
+          <div class="quick-lead-step" id="simulator-lead-step" hidden>
+            <div class="quick-step-message"><span>FALTA POUCO</span><strong>Preencha os campos para mostrar o resultado.</strong></div>
+            <form id="simulator-lead-form">
+              <div class="quick-fields quick-lead-fields">
+                <label><span>Nome / Nome da empresa <b>OBRIGATÓRIO</b></span><input name="nome_empresa" required placeholder="Como devemos identificar você?" autocomplete="organization"></label>
+                <label><span>Telefone <b>OBRIGATÓRIO</b></span><input name="telefone" required placeholder="(34) 99999-9999" inputmode="tel" autocomplete="tel"></label>
+              </div>
+              <button class="button button-primary" type="submit">GERAR PAINEL DE LED <span>→</span></button>
+            </form>
+          </div>
+          <div class="quick-result" id="simulator-result" hidden>
+            <div class="quick-preview-stage"><div class="led-preview" id="led-preview"><span>CONTAINER</span><strong>LED</strong><small id="preview-size">2 × 4 m</small></div></div>
+            <div class="quick-result-copy">
+              <div class="eyebrow light"><span></span> RESULTADO DO PROJETO</div>
+              <h3>Uma primeira visão<br>do seu painel.</h3>
+              <div class="quick-result-metrics">
+                <div><strong id="result-area">8 m²</strong><span>área total</span></div>
+                <div><strong id="result-resolution">333 × 667 px</strong><span>resolução estimada</span></div>
+                <div><strong id="result-weight">336 kg</strong><span>peso estimado</span></div>
+                <div><strong id="result-power">6,0 kW</strong><span>potência máxima</span></div>
+              </div>
+              <p>Estimativa preliminar. Estrutura, instalação elétrica, ventilação e condições do local dependem de avaliação técnica.</p>
+              <a class="button button-primary" id="simulator-whatsapp" href="#" target="_blank" rel="noopener">ENVIAR OS DADOS PARA ATENDIMENTO <span>↗</span></a>
+              <button class="button button-outline simulator-email" id="simulator-email" type="button">Enviar cópia por e-mail</button>
+              <small class="simulator-send-status" id="simulator-send-status" role="status" aria-live="polite"></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" id="contato"><div class="container"><div class="footer-top"><a class="brand brand-image footer-brand" href="#inicio"><img src="assets/container-led-logo.webp" alt="Container LED"></a><p>Mídia, tecnologia e conexão para marcas que querem ocupar seu espaço.</p><div class="footer-social"><a href="https://www.instagram.com/containerled/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://wa.me/5534999259499" target="_blank" rel="noopener">WhatsApp ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Container LED. Todos os direitos reservados.</span><span>CNPJ 29.447.330/0001-01</span><span>@containerled</span></div></div></footer>
