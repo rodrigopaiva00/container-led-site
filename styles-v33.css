@@ -1,0 +1,14 @@
+@import url("styles-v32.css");
+
+/* Primeira seção: legenda única, centralizada e com maior presença */
+.hero-video-shell figcaption{
+  align-content:center;
+  justify-items:center;
+  padding:0 12px;
+  text-align:center;
+}
+.hero-video-shell figcaption strong{
+  width:100%;
+  text-align:center;
+  letter-spacing:.08em;
+}
