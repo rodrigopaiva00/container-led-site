@@ -1,0 +1,27 @@
+@import url("styles-v35.css");
+
+/* Botão flutuante: 120% das dimensões originais */
+.whatsapp-float{
+  padding:13.2px 19.2px;
+  gap:9.6px;
+  border-radius:118.8px;
+  font-size:14.4px;
+}
+.whatsapp-float .contact-icon{
+  width:24px;
+  height:24px;
+}
+
+@media(max-width:640px){
+  .whatsapp-float{
+    padding:12px 15.6px;
+    gap:9.6px;
+    border-radius:118.8px;
+    font-size:14.4px;
+    max-width:calc(100vw - 24px);
+  }
+  .whatsapp-float .contact-icon{
+    width:24px;
+    height:24px;
+  }
+}
