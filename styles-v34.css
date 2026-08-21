@@ -1,0 +1,72 @@
+@import url("styles-v33.css");
+
+/* Bloco de contatos: marcas oficiais em cores originais */
+.direct-contact{
+  display:grid;
+  gap:18px;
+}
+.direct-contact .platform-contact{
+  display:grid;
+  grid-template-columns:24px minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+}
+.platform-contact-logo{
+  width:24px;
+  height:24px;
+  display:grid;
+  place-items:center;
+}
+.platform-icon{
+  display:block;
+  width:24px;
+  height:24px;
+}
+.platform-contact-copy{
+  min-width:0;
+  display:grid;
+}
+.platform-contact-copy small{
+  color:#777;
+  letter-spacing:.17em;
+  font-size:9px;
+}
+.platform-contact-copy strong{
+  display:block;
+  color:#fff;
+  font:600 17px "Space Grotesk",sans-serif;
+  overflow-wrap:anywhere;
+}
+
+/* Botão flutuante ampliado proporcionalmente para 200% */
+.whatsapp-float{
+  right:20px;
+  bottom:20px;
+  padding:22px 32px;
+  gap:16px;
+  border-radius:198px;
+  font-size:24px;
+}
+.whatsapp-float .contact-icon{
+  width:40px;
+  height:40px;
+}
+
+@media(max-width:640px){
+  .direct-contact .platform-contact{
+    grid-template-columns:24px minmax(0,1fr);
+  }
+  .whatsapp-float{
+    right:12px;
+    bottom:12px;
+    padding:20px 28px;
+    gap:16px;
+    border-radius:198px;
+    font-size:24px;
+    max-width:calc(100vw - 24px);
+  }
+  .whatsapp-float .contact-icon{
+    width:40px;
+    height:40px;
+  }
+}
