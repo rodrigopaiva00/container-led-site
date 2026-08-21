@@ -1,0 +1,9 @@
+@import url("styles-v34.css");
+
+/* Mantém o texto do botão ampliado também na versão mobile */
+@media(max-width:640px){
+  .whatsapp-float b{
+    display:block;
+    white-space:nowrap;
+  }
+}
