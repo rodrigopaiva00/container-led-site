@@ -62,7 +62,7 @@ Arquivos principais:
 - `tela-digital.html`: modelo único das páginas individuais;
 - `telas-digitais.js`: renderização automática dos cards e detalhes;
 - `telas-digitais.css`: layout responsivo;
-- `_redirects`: direcionamento das URLs individuais no Cloudflare Pages.
+- `functions/telas-digitais/[slug].js`: rota dinâmica das páginas individuais no Cloudflare Pages.
 
 A grade não possui limite fixo de itens. Ela se reorganiza automaticamente em três ou quatro colunas conforme o espaço disponível, duas colunas no tablet e uma coluna no celular.
 
