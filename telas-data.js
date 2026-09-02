@@ -58,25 +58,5 @@ window.CONTAINER_LED_TELAS = Object.freeze([
     insercoes: "",
     resolucao: "",
     descricao: ""
-  }),
-  Object.freeze({
-    id: 999,
-    slug: "teste-escalabilidade",
-    nome: "Tela temporária de teste",
-    endereco: "",
-    bairro: "",
-    cidade: "Uberlândia",
-    estado: "MG",
-    largura: null,
-    altura: null,
-    status: "Em construção",
-    imagem: "",
-    imagemAlt: "",
-    googleMaps: "",
-    mapaEmbed: "",
-    audiencia: "",
-    insercoes: "",
-    resolucao: "",
-    descricao: ""
   })
 ]);
