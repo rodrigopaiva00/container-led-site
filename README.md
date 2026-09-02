@@ -50,3 +50,32 @@ O plano gratuito do Resend pode ser usado, respeitando os limites vigentes do se
 - Destinatário definido no ambiente do Cloudflare.
 - Assunto, corpo e origem validados pela função.
 - Mensagens do WhatsApp são apenas pré-preenchidas; o usuário precisa pressionar **Enviar**.
+
+## Catálogo de telas digitais
+
+O catálogo público está disponível em `/telas-digitais`. A página monta todos os cards automaticamente a partir do arquivo `telas-data.js`. A página individual de cada ponto usa a mesma fonte de dados e é acessada pela rota `/telas-digitais/[slug]`.
+
+Arquivos principais:
+
+- `telas-data.js`: cadastro centralizado das telas;
+- `telas-digitais/index.html`: página pública do catálogo;
+- `tela-digital.html`: modelo único das páginas individuais;
+- `telas-digitais.js`: renderização automática dos cards e detalhes;
+- `telas-digitais.css`: layout responsivo;
+- `_redirects`: direcionamento das URLs individuais no Cloudflare Pages.
+
+A grade não possui limite fixo de itens. Ela se reorganiza automaticamente em três ou quatro colunas conforme o espaço disponível, duas colunas no tablet e uma coluna no celular.
+
+## Como cadastrar uma nova tela
+
+1. Adicione a foto otimizada da nova tela à pasta `assets`.
+2. Abra `telas-data.js`.
+3. Copie um dos objetos existentes dentro de `window.CONTAINER_LED_TELAS`.
+4. Preencha os campos `id`, `slug`, `nome`, `endereco`, `bairro`, `cidade`, `estado`, `largura`, `altura`, `status`, `imagem`, `imagemAlt`, `googleMaps`, `mapaEmbed`, `audiencia`, `insercoes`, `resolucao` e `descricao`.
+5. Use um `slug` único, em letras minúsculas e separado por hífens, por exemplo `getulio-vargas`.
+6. Quando um dado ainda não estiver confirmado, use uma string vazia (`""`) ou `null`. O catálogo omite automaticamente o campo e nunca exibe `undefined`.
+7. Salve e publique. O novo card e sua página individual serão criados automaticamente, sem alterar HTML ou CSS.
+
+Para o mapa, informe a URL pública em `googleMaps`. Quando houver latitude e longitude confirmadas, prefira uma URL baseada nas coordenadas para obter maior precisão. O campo `mapaEmbed` recebe a URL própria para incorporação do mapa.
+
+O botão de WhatsApp é gerado automaticamente com o nome, endereço e cidade da tela selecionada. Campos vazios são removidos da mensagem.
