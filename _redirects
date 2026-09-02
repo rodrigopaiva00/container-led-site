@@ -1,1 +1,1 @@
-/telas-digitais/:slug /tela-digital?slug=:slug 200
+# As rotas individuais são resolvidas por functions/telas-digitais/[slug].js
