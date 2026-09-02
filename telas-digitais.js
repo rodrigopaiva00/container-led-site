@@ -87,7 +87,7 @@
   const renderDetail = () => {
     const root = document.getElementById("screen-detail");
     if (!root) return;
-    const slug = decodeURIComponent(location.pathname.split("/").filter(Boolean).pop() || "");
+    const slug = new URLSearchParams(location.search).get("slug") || decodeURIComponent(location.pathname.split("/").filter(Boolean).pop() || "");
     const tela = telas.find(item => item.slug === slug);
     if (!tela) {
       document.title = "Tela não encontrada | Container LED";
