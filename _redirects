@@ -1,1 +1,1 @@
-/telas-digitais/:slug /tela-digital.html?slug=:slug 200
+/telas-digitais/:slug /tela-digital?slug=:slug 200
