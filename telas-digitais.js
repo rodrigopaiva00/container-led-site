@@ -75,11 +75,11 @@
       "",
       "Gostaria de anunciar nesta tela:",
       "",
-      present(tela.nome) ? telaNumber(tela.id).replace("TELA", "Tela") + " — " + tela.nome : "",
-      present(tela.local) ? "Local: " + tela.local : (present(tela.endereco) ? "Local: " + [tela.endereco, locality(tela)].filter(present).join(" — ") : ""),
+      telaNumber(tela.id).replace("TELA", "Tela") + " — " + tela.nome,
+      present(tela.local) ? "Local: " + tela.local : "Local: " + [tela.endereco, locality(tela)].filter(present).join(" — "),
       "",
       "Gostaria de receber informações sobre disponibilidade, planos e valores."
-    ].filter(line => line !== "");
+    ];
     return "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
   };
 
