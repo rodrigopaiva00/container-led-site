@@ -41,22 +41,23 @@ window.CONTAINER_LED_TELAS = Object.freeze([
   }),
   Object.freeze({
     id: 3,
-    slug: "getulio-vargas",
-    nome: "Getúlio Vargas",
-    endereco: "",
+    slug: "terminal-central",
+    nome: "Terminal Central",
+    endereco: "Terminal Central",
     bairro: "",
     cidade: "Uberlândia",
     estado: "MG",
+    local: "K-Fé Container — Terminal Central — Uberlândia/MG",
     largura: null,
     altura: null,
-    status: "Em construção",
-    imagem: "",
-    imagemAlt: "",
-    googleMaps: "",
+    status: "Em operação",
+    imagem: "/assets/telas/terminal-central-kfe-container.webp",
+    imagemAlt: "K-Fé Container no Terminal Central em Uberlândia",
+    googleMaps: "https://maps.app.goo.gl/KbXKLSBYY3ShqKZU8",
     mapaEmbed: "",
     audiencia: "",
     insercoes: "",
     resolucao: "",
-    descricao: ""
+    descricao: "Localizada no ponto de parada de motoristas de aplicativos (Uber), ao lado da escada rolante do Terminal Central, dentro da cafeteria K-Fé Container."
   })
 ]);

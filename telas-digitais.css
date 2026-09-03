@@ -107,3 +107,18 @@
   .screen-map-grid iframe{min-height:390px}
 }
 @media(max-width:400px){.screen-facts dl{grid-template-columns:1fr}}
+
+.home-all-screens{margin-top:24px}
+.other-screens-section{padding:84px 0;background:#080808;border-top:1px solid #232323}
+.other-screens-section h2{margin:18px 0 32px;font:700 clamp(32px,4vw,52px)/1 "Space Grotesk",sans-serif}
+.other-screens-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:22px}
+.other-screen-card{overflow:hidden;border:1px solid #2d2d2d;border-top:3px solid #ff5a00;border-radius:18px;background:#111}
+.other-screen-media{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#090909}
+.other-screen-media img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.other-screen-card:hover .other-screen-media img{transform:scale(1.035)}
+.other-screen-media>.screen-status{position:absolute;top:14px;left:14px}
+.other-screen-card>div{padding:22px}
+.other-screen-card h3{margin:9px 0 8px;font:700 23px/1.1 "Space Grotesk",sans-serif}
+.other-screen-card p{margin:0 0 20px;color:#999}
+.other-screen-card .catalog-button{width:100%}
+@media(max-width:640px){.home-all-screens{width:100%;justify-content:center}.other-screens-section{padding:60px 0}.other-screens-grid{grid-template-columns:1fr}}

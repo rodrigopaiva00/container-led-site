@@ -75,11 +75,10 @@
       "",
       "Gostaria de anunciar nesta tela:",
       "",
-      present(tela.nome) ? "Tela: " + tela.nome : "",
-      present(tela.endereco) ? "Endereço: " + tela.endereco : "",
-      present(locality(tela)) ? "Cidade: " + locality(tela) : "",
+      present(tela.nome) ? telaNumber(tela.id).replace("TELA", "Tela") + " — " + tela.nome : "",
+      present(tela.local) ? "Local: " + tela.local : (present(tela.endereco) ? "Local: " + [tela.endereco, locality(tela)].filter(present).join(" — ") : ""),
       "",
-      "Gostaria de receber informações sobre disponibilidade, planos e valores para anunciar neste ponto."
+      "Gostaria de receber informações sobre disponibilidade, planos e valores."
     ].filter(line => line !== "");
     return "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
   };
@@ -99,7 +98,9 @@
     if (description) description.content = "Conheça a tela digital " + tela.nome + " da Container LED em " + locality(tela) + ".";
     const facts = detailFacts(tela).map(([label,value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("");
     const addressParts = [tela.endereco, tela.bairro, locality(tela)].filter(present);
-    const mapSection = present(tela.mapaEmbed) ? `<section class="screen-map-section"><div class="container screen-map-grid"><div><span class="catalog-kicker">LOCALIZAÇÃO</span><h2>Veja onde sua marca vai aparecer.</h2><p>${addressParts.map(esc).join("<br>")}</p><a class="catalog-button catalog-button-primary" href="${esc(tela.googleMaps)}" target="_blank" rel="noopener">VER NO GOOGLE MAPS ↗</a></div><iframe title="Mapa da tela ${esc(tela.nome)}" src="${esc(tela.mapaEmbed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></section>` : `<section class="screen-location-pending"><div class="container"><span>LOCALIZAÇÃO</span><h2>Informações em atualização.</h2><p>Os dados completos deste ponto serão publicados assim que estiverem confirmados.</p></div></section>`;
+    const mapSection = present(tela.mapaEmbed) ? `<section class="screen-map-section"><div class="container screen-map-grid"><div><span class="catalog-kicker">LOCALIZAÇÃO</span><h2>Veja onde sua marca vai aparecer.</h2><p>${addressParts.map(esc).join("<br>")}</p><a class="catalog-button catalog-button-primary" href="${esc(tela.googleMaps)}" target="_blank" rel="noopener">VER NO GOOGLE MAPS ↗</a></div><iframe title="Mapa da tela ${esc(tela.nome)}" src="${esc(tela.mapaEmbed)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></section>` : present(tela.googleMaps) ? `<section class="screen-location-pending"><div class="container"><span>LOCALIZAÇÃO</span><h2>Veja onde sua marca vai aparecer.</h2><p>${addressParts.map(esc).join("<br>")}</p><a class="catalog-button catalog-button-primary" href="${esc(tela.googleMaps)}" target="_blank" rel="noopener">VER NO GOOGLE MAPS ↗</a></div></section>` : `<section class="screen-location-pending"><div class="container"><span>LOCALIZAÇÃO</span><h2>Informações em atualização.</h2><p>Os dados completos deste ponto serão publicados assim que estiverem confirmados.</p></div></section>`;
+    const otherScreens = telas.filter(item => item.slug !== tela.slug).map(item => `<article class="other-screen-card"><a class="other-screen-media" href="${detailUrl(item)}">${media(item)}<span class="screen-status ${statusClass(item.status)}">${esc(item.status)}</span></a><div><span class="screen-id">${telaNumber(item.id)}</span><h3>${esc(item.nome)}</h3><p>${esc(locality(item))}</p><a class="catalog-button catalog-button-secondary" href="${detailUrl(item)}">CONHECER ESTA TELA</a></div></article>`).join("");
+    const otherScreensSection = otherScreens ? `<section class="other-screens-section"><div class="container"><span class="catalog-kicker">CONTINUE NAVEGANDO</span><h2>NAVEGUE PELAS OUTRAS TELAS</h2><div class="other-screens-grid">${otherScreens}</div></div></section>` : "";
     root.innerHTML = `
       <section class="screen-detail-hero"><div class="container">
         <a class="screen-back" href="/telas-digitais">← VOLTAR PARA TODAS AS TELAS</a>
@@ -117,6 +118,7 @@
       </div></section>
       <section class="screen-facts"><div class="container"><dl>${facts}</dl></div></section>
       ${mapSection}
+      ${otherScreensSection}
       <section class="screen-detail-footer-cta"><div class="container"><p>Conheça os outros pontos da rede Container LED.</p><a class="catalog-button catalog-button-secondary" href="/telas-digitais">VOLTAR PARA TODAS AS TELAS</a></div></section>`;
   };
 
