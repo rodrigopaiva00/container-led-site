@@ -7,7 +7,7 @@
   const telaNumber = (id) => "TELA " + String(id).padStart(2, "0");
   const dimensions = (tela) => present(tela.altura) && present(tela.largura) ? tela.altura + " m de altura × " + tela.largura + " m de largura" : "";
   const locality = (tela) => [tela.cidade, tela.estado].filter(present).join(" / ");
-  const statusClass = (status) => String(status).toLowerCase().includes("constru") ? "is-building" : "is-live";
+  const statusClass = (status) => /constru|breve/.test(String(status).toLowerCase()) ? "is-building" : "is-live";
   const detailUrl = (tela) => "/telas-digitais/" + encodeURIComponent(tela.slug);
   const media = (tela, large = false) => present(tela.video)
     ? `<video class="screen-media-video" autoplay muted loop playsinline preload="metadata" poster="${esc(tela.imagem)}" aria-label="${esc(tela.imagemAlt || tela.nome)}"><source src="${esc(tela.video)}" type="video/mp4">Seu navegador não suporta vídeos HTML5.</video>`

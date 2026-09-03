@@ -50,7 +50,7 @@ window.CONTAINER_LED_TELAS = Object.freeze([
     local: "Terminal Central — Centro — Uberlândia/MG",
     largura: null,
     altura: null,
-    status: "Em operação",
+    status: "EM BREVE",
     imagem: "/assets/telas/terminal-central-kfe-container.png",
     imagemAlt: "K-Fé Container no Terminal Central em Uberlândia",
     googleMaps: "https://maps.app.goo.gl/rVtDsu9JGKjDJ9Yy6",
