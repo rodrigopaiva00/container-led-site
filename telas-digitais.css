@@ -122,3 +122,19 @@
 .other-screen-card p{margin:0 0 20px;color:#999}
 .other-screen-card .catalog-button{width:100%}
 @media(max-width:640px){.home-all-screens{width:100%;justify-content:center}.other-screens-section{padding:60px 0}.other-screens-grid{grid-template-columns:1fr}}
+
+.screen-catalog-back{width:max-content;min-height:48px;padding:13px 22px;border:2px solid #ff5a00;background:rgba(255,90,0,.08);color:#ff6a18;box-shadow:0 0 24px rgba(255,80,0,.1)}
+.screen-catalog-back:hover{background:#ff5a00;color:#fff;box-shadow:0 10px 30px rgba(255,80,0,.25)}
+.screen-catalog-back:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.screen-detail-hero .screen-catalog-back{margin-bottom:38px}
+.screen-detail-footer-cta .container{justify-content:flex-end}
+@media(max-width:960px){
+  body.catalog-menu-open{overflow:hidden;touch-action:none}
+  .catalog-header .menu-toggle{position:relative;z-index:104}
+  .catalog-header .main-nav{width:100vw;max-width:100vw;box-sizing:border-box;overflow-y:auto}
+  .catalog-header .main-nav.open{transform:translateX(0)!important}
+}
+@media(max-width:640px){
+  .screen-catalog-back{width:100%;white-space:normal}
+  .screen-detail-footer-cta .container{width:100%}
+}

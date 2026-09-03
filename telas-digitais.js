@@ -19,15 +19,17 @@
     const button = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".main-nav");
     if (!button || !menu) return;
-    const close = () => { menu.classList.remove("open"); button.classList.remove("open"); button.setAttribute("aria-expanded", "false"); button.setAttribute("aria-label", "Abrir menu"); };
-    button.addEventListener("click", () => {
-      const open = button.getAttribute("aria-expanded") !== "true";
+    const setOpen = (open) => {
       menu.classList.toggle("open", open);
       button.classList.toggle("open", open);
+      document.body.classList.toggle("catalog-menu-open", open);
       button.setAttribute("aria-expanded", String(open));
       button.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-    });
+    };
+    const close = () => setOpen(false);
+    button.addEventListener("click", () => setOpen(button.getAttribute("aria-expanded") !== "true"));
     menu.querySelectorAll("a").forEach(link => link.addEventListener("click", close));
+    document.addEventListener("keydown", event => { if (event.key === "Escape") close(); });
     window.addEventListener("resize", () => { if (window.innerWidth > 960) close(); }, {passive:true});
   };
 
@@ -105,7 +107,7 @@
     const otherScreensSection = otherScreens ? `<section class="other-screens-section"><div class="container"><span class="catalog-kicker">CONTINUE NAVEGANDO</span><h2>NAVEGUE PELAS OUTRAS TELAS</h2><div class="other-screens-grid">${otherScreens}</div></div></section>` : "";
     root.innerHTML = `
       <section class="screen-detail-hero"><div class="container">
-        <a class="screen-back" href="/telas-digitais">← VOLTAR PARA TODAS AS TELAS</a>
+        <a class="catalog-button screen-catalog-back" href="/telas-digitais/">← VOLTAR PARA TODAS AS TELAS</a>
         <div class="screen-detail-grid">
           <div class="screen-detail-copy">
             <span class="catalog-kicker">${telaNumber(tela.id)} · ${esc(locality(tela))}</span>
@@ -121,7 +123,7 @@
       <section class="screen-facts"><div class="container"><dl>${facts}</dl></div></section>
       ${mapSection}
       ${otherScreensSection}
-      <section class="screen-detail-footer-cta"><div class="container"><p>Conheça os outros pontos da rede Container LED.</p><a class="catalog-button catalog-button-secondary" href="/telas-digitais">VOLTAR PARA TODAS AS TELAS</a></div></section>`;
+      <section class="screen-detail-footer-cta"><div class="container"><a class="catalog-button screen-catalog-back" href="/telas-digitais/">← VOLTAR PARA TODAS AS TELAS</a></div></section>`;
   };
 
   setMenu();
