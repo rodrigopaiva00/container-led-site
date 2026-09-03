@@ -20,8 +20,8 @@
 .screen-card{min-width:0;display:flex;flex-direction:column;background:#111;border:1px solid #2d2d2d;border-top:3px solid #ff5a00;border-radius:18px;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
 .screen-card:hover{transform:translateY(-6px);border-color:#ff5a00;box-shadow:0 22px 55px rgba(0,0,0,.42)}
 .screen-card-media{position:relative;display:block;aspect-ratio:4/3;background:#090909;overflow:hidden}
-.screen-card-media img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
-.screen-card:hover .screen-card-media img{transform:scale(1.035)}
+.screen-card-media img,.screen-card-media video{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.screen-card:hover .screen-card-media img,.screen-card:hover .screen-card-media video{transform:scale(1.035)}
 .screen-placeholder{width:100%;height:100%;display:grid;place-items:center;background:radial-gradient(circle at center,rgba(255,83,0,.2),transparent 50%),linear-gradient(135deg,#15100d,#080808);color:#777;font:700 12px "Space Grotesk",sans-serif;letter-spacing:.18em}
 .screen-placeholder:before{content:"";position:absolute;width:74px;height:112px;border:2px solid rgba(255,90,0,.45);box-shadow:0 0 35px rgba(255,90,0,.18)}
 .screen-status{display:inline-flex;align-items:center;width:max-content;padding:8px 12px;border-radius:999px;text-transform:uppercase;font:800 10px/1 "Space Grotesk",sans-serif;letter-spacing:.1em}
@@ -58,7 +58,7 @@
 .screen-detail-copy address{margin:25px 0;color:#fff;font-style:normal;line-height:1.7}
 .screen-whatsapp{margin-top:10px}
 .screen-detail-photo{margin:0;aspect-ratio:4/3;border:2px solid #ff5a00;border-radius:22px;overflow:hidden;background:#0a0a0a;box-shadow:0 25px 70px rgba(255,76,0,.1)}
-.screen-detail-photo img{width:100%;height:100%;object-fit:cover}
+.screen-detail-photo img,.screen-detail-photo video{width:100%;height:100%;object-fit:cover}
 .screen-facts{padding:35px 0;background:#111;border-block:1px solid #282828}
 .screen-facts dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));margin:0}
 .screen-facts dl>div{padding:18px 24px;border-left:1px solid #303030}
@@ -114,8 +114,8 @@
 .other-screens-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:22px}
 .other-screen-card{overflow:hidden;border:1px solid #2d2d2d;border-top:3px solid #ff5a00;border-radius:18px;background:#111}
 .other-screen-media{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:#090909}
-.other-screen-media img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
-.other-screen-card:hover .other-screen-media img{transform:scale(1.035)}
+.other-screen-media img,.other-screen-media video{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.other-screen-card:hover .other-screen-media img,.other-screen-card:hover .other-screen-media video{transform:scale(1.035)}
 .other-screen-media>.screen-status{position:absolute;top:14px;left:14px}
 .other-screen-card>div{padding:22px}
 .other-screen-card h3{margin:9px 0 8px;font:700 23px/1.1 "Space Grotesk",sans-serif}

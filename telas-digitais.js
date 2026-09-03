@@ -9,9 +9,11 @@
   const locality = (tela) => [tela.cidade, tela.estado].filter(present).join(" / ");
   const statusClass = (status) => String(status).toLowerCase().includes("constru") ? "is-building" : "is-live";
   const detailUrl = (tela) => "/telas-digitais/" + encodeURIComponent(tela.slug);
-  const media = (tela, large = false) => tela.imagem
-    ? `<img src="${esc(tela.imagem)}" alt="${esc(tela.imagemAlt || tela.nome)}" loading="${large ? "eager" : "lazy"}">`
-    : `<div class="screen-placeholder" role="img" aria-label="Imagem da ${esc(tela.nome)} em breve"><span>IMAGEM EM BREVE</span></div>`;
+  const media = (tela, large = false) => present(tela.video)
+    ? `<video class="screen-media-video" autoplay muted loop playsinline preload="metadata" poster="${esc(tela.imagem)}" aria-label="${esc(tela.imagemAlt || tela.nome)}"><source src="${esc(tela.video)}" type="video/mp4">Seu navegador não suporta vídeos HTML5.</video>`
+    : tela.imagem
+      ? `<img src="${esc(tela.imagem)}" alt="${esc(tela.imagemAlt || tela.nome)}" loading="${large ? "eager" : "lazy"}">`
+      : `<div class="screen-placeholder" role="img" aria-label="Imagem da ${esc(tela.nome)} em breve"><span>IMAGEM EM BREVE</span></div>`;
 
   const setMenu = () => {
     const button = document.querySelector(".menu-toggle");
